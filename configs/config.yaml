@@ -17,8 +17,8 @@ data:
 # Model Configuration
 model:
   type: "conv_vae"  # Options: basic_vae, conv_vae, beta_vae, cvae, vade
-  latent_dim: 128
-  hidden_dims: [16, 32, 64]  # Reduced from [256, 512, 1024] to prevent PC hanging
+  latent_dim: 256  # Increased from 128 to 256 (compression 646:1 instead of 1292:1)
+  hidden_dims: [64, 128, 256]  # Optimized for RTX 3060 12GB - deeper architecture
   beta: 4.0  # For Beta-VAE
   n_clusters: 15  # For VaDE (4 languages + 3 genres per language = 15 classes)
   num_languages: 4  # Arabic, English, Hindi, Spanish
@@ -35,13 +35,13 @@ multimodal:
   
 # Training Configuration
 training:
-  batch_size: 32
-  epochs: 100
+  batch_size: 24  # Reduced from 32 to fit larger model in 12GB VRAM
+  epochs: 200  # Increased from 100 to allow better convergence
   learning_rate: 0.0001
   weight_decay: 0.0001
-  early_stopping_patience: 15
+  early_stopping_patience: 25  # Increased from 15 to allow longer training
   gradient_clip: 0.5
-  mixed_precision: true  # FP16 training
+  mixed_precision: true  # FP16 training - essential for 12GB VRAM
   accumulation_steps: 1
   
 # Optimization
