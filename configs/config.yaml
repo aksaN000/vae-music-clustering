@@ -1,0 +1,109 @@
+# Experiment Configuration for VAE Music Clustering
+
+# Data Configuration
+data:
+  audio_dir: "data/audio"
+  lyrics_dir: "data/processed_lyrics"
+  features_dir: "data/features"
+  cache_dir: "data/cache"
+  sample_rate: 22050
+  audio_duration: 30  # seconds
+  n_mels: 128
+  n_mfcc: 40
+  n_fft: 2048
+  hop_length: 512
+  num_workers: 0  # Use main process only (Windows multiprocessing fix)
+  
+# Model Configuration
+model:
+  type: "conv_vae"  # Options: basic_vae, conv_vae, beta_vae, cvae, vade
+  latent_dim: 128
+  hidden_dims: [16, 32, 64]  # Reduced from [256, 512, 1024] to prevent PC hanging
+  beta: 4.0  # For Beta-VAE
+  n_clusters: 50  # For VaDE (5 languages + 45 genres = 50 classes)
+  num_languages: 5  # Arabic, Bangla, English, Hindi, Spanish
+  num_genres: 45  # Total unique genres across all languages
+  dropout: 0.2
+  
+# Multi-modal Configuration
+multimodal:
+  fusion_type: "attention"  # Options: early, late, attention
+  audio_feature: "melspec"  # Options: melspec, mfcc, both
+  lyrics_model: "xlm-roberta-base"  # Multilingual transformer
+  audio_weight: 0.5
+  lyrics_weight: 0.5
+  
+# Training Configuration
+training:
+  batch_size: 32
+  epochs: 100
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  early_stopping_patience: 15
+  gradient_clip: 0.5
+  mixed_precision: true  # FP16 training
+  accumulation_steps: 1
+  
+# Optimization
+optimization:
+  use_gpu: true
+  gpu_ids: [0]  # Use first GPU
+  pin_memory: true
+  non_blocking: true
+  
+# Clustering Configuration
+clustering:
+  methods: ["kmeans", "agglomerative", "dbscan", "gmm"]
+  n_clusters: [5, 10, 15, 20, 30, 45, 50]  # Test multiple cluster counts (5 languages, 45 genres, 50 combined)
+  kmeans_init: 10  # Number of k-means initializations
+  dbscan_eps: 0.5
+  dbscan_min_samples: 5
+  
+# Evaluation Configuration
+evaluation:
+  metrics: ["silhouette", "calinski_harabasz", "davies_bouldin", "ari", "nmi", "purity"]
+  use_labels: true  # Use language/genre labels for ARI, NMI, Purity
+  
+# Visualization Configuration
+visualization:
+  dim_reduction: "umap"  # Options: tsne, umap, pca
+  n_components: 2
+  perplexity: 30  # For t-SNE
+  n_neighbors: 15  # For UMAP
+  
+# Logging Configuration
+logging:
+  use_wandb: false
+  use_tensorboard: true
+  log_interval: 10  # Log every N batches
+  save_interval: 5  # Save checkpoint every N epochs
+  output_dir: "results"
+  
+# Baseline Configuration
+baseline:
+  methods: ["pca_kmeans", "ae_kmeans", "raw_kmeans"]
+  pca_components: 128
+  ae_hidden_dims: [512, 256, 128]
+  
+# Languages
+languages:
+  - arabic
+  - bangla
+  - english
+  - hindi
+  - spanish
+  
+# Augmentation (for audio)
+augmentation:
+  enabled: true
+  pitch_shift_steps: [-2, 2]
+  time_stretch_rate: [0.9, 1.1]
+  noise_factor: 0.005
+  
+# Lyrics Processing
+lyrics:
+  extract_original: true
+  extract_romanized: true
+  extract_translated: true
+  target_language: "en"  # Translate to English
+  max_length: 512  # Transformer max tokens

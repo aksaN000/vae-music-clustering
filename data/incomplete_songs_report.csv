@@ -1,0 +1,465 @@
+track_id,artist,title,language,has_audio,has_lyrics
+ar_0003,Umm Kulthum,Alf Leila Wa Leila,arabic,True,False
+ar_0006,Fairuz,Nassam Alayna Al Hawa,arabic,True,False
+ar_0010,Abdel Halim Hafez,Khosara Khosara,arabic,True,False
+ar_0011,Fairuz,Zahrat Al Madain,arabic,True,False
+ar_0012,Umm Kulthum,Fakkarouni,arabic,True,False
+ar_0013,Abdel Halim Hafez,Ahwak Moot,arabic,True,False
+ar_0014,Fairuz,Shadi,arabic,True,False
+ar_0015,Warda,Eyyam,arabic,True,False
+ar_0018,Amr Diab,Habibi Ya Nour El Ain,arabic,True,False
+ar_0021,Elissa,Ajmal Ihsas,arabic,True,False
+ar_0024,Tamer Hosny,Habibi Wenta,arabic,False,False
+ar_0026,Sherine,Masha3er,arabic,True,False
+ar_0027,Mohamed Hamaki,Ahla Haga Fiki,arabic,True,False
+ar_0028,Mohamed Hamaki,We Aftakart,arabic,True,False
+ar_0030,Amr Diab,We Malo,arabic,True,False
+ar_0031,Nancy Ajram,Moegaba,arabic,True,False
+ar_0032,Elissa,Battal Aa Aali,arabic,True,False
+ar_0035,Maya Diab,Hayda Haki,arabic,True,False
+ar_0036,Ragheb Alama,Nassini El Dounia,arabic,True,False
+ar_0038,Assi El Helani,Yana Ya Mghayer,arabic,False,False
+ar_0039,Najwa Karam,Ma Fi Nom,arabic,True,False
+ar_0040,Carole Samaha,Khalleek Hena,arabic,False,False
+ar_0045,Omar Kamal,Ya Lili,arabic,True,False
+ar_0048,Abyusif,Bos Omak,arabic,True,False
+ar_0051,Sherine,Masha3er,arabic,True,False
+ar_0052,Tamer Ashour,Enta Leh,arabic,True,False
+ar_0054,Asala,Bent Akabir,arabic,True,False
+ar_0055,Angham,Sidi Wasalak,arabic,True,False
+ar_0056,Nawal El Kuwaitia,Matefakker,arabic,False,False
+ar_0057,Majid Al Mohandis,Waheshni Moot,arabic,True,False
+ar_0058,Abdallah Al Rowaished,Khalas,arabic,True,False
+ar_0059,Rashed Al Majed,Wainek Habibi,arabic,True,False
+ar_0060,Ahlam,Hatha Ana,arabic,True,False
+ar_0061,Mohamed Abdo,Alwan,arabic,True,False
+ar_0062,Aseel Hameem,La Yeswa,arabic,True,False
+ar_0064,Kadim Al Sahir,Ana Wa Layla,arabic,True,False
+ar_0065,Kadim Al Sahir,La Titnahad,arabic,True,False
+ar_0066,Fairuz,Bhebbak Ya Lebnan,arabic,True,False
+ar_0067,Marcel Khalife,Umi,arabic,True,False
+ar_0068,Sabah Fakhri,Ya Mal El Sham,arabic,True,False
+ar_0069,Lotfi Bouchnak,Mawal Ataba,arabic,True,False
+ar_0074,Faudel,Tellement N'brick,arabic,False,False
+ar_0075,Souad Massi,Raoui,arabic,True,False
+ar_0077,Angham,Bahibbik Wahashteeni,arabic,True,False
+ar_0078,Nawal El Zoghbi,Yama Alou,arabic,True,False
+ar_0082,Maya Nasri,Shou Helou,arabic,True,False
+ar_0084,Amr Diab,Kol El Kalam,arabic,True,False
+ar_0086,Tamer Hosny,Nari Nari,arabic,True,False
+ar_0088,Mohamed Mounir,Matloob Zaeem,arabic,True,False
+ar_0089,Amr Diab,Maak,arabic,True,False
+ar_0092,Wael Jassar,Besmellah,arabic,True,False
+ar_0095,Fares Karam,Retani,arabic,True,False
+ar_0096,Fares Karam,Shefta Yaba,arabic,True,False
+ar_0100,Cairokee,Ya Elrabe3,arabic,True,False
+bn_0001,Rabindranath Tagore,Ekla Chalo Re,bangla,True,False
+bn_0003,Rabindranath Tagore,Purano Sei Diner Katha,bangla,True,False
+bn_0004,Rabindranath Tagore,Jodi Tor Dak Shune Keu Na Ashe,bangla,True,False
+bn_0005,Rabindranath Tagore,Ami Chini Go Chini Tomare,bangla,True,False
+bn_0006,Rabindranath Tagore,Aguner Poroshmoni,bangla,True,False
+bn_0007,Rabindranath Tagore,Akash Bhora Surjo Tara,bangla,True,False
+bn_0008,Rabindranath Tagore,Bhalobese Sokhi,bangla,True,False
+bn_0009,Rabindranath Tagore,Jedin Esechhilem Pothopane,bangla,True,False
+bn_0010,Rabindranath Tagore,Kon Alo Laglo Chokhe,bangla,True,False
+bn_0011,Rabindranath Tagore,Mone Ki Didha,bangla,True,False
+bn_0012,Rabindranath Tagore,Nil Digante,bangla,True,False
+bn_0013,Rabindranath Tagore,O Amar Desher Mati,bangla,True,False
+bn_0014,Rabindranath Tagore,Pagla Hawar Badol Dine,bangla,True,False
+bn_0015,Rabindranath Tagore,Prothom Dekha,bangla,True,False
+bn_0016,Rabindranath Tagore,Tomar Khola Hawa,bangla,True,False
+bn_0017,Rabindranath Tagore,Tumi Robe Nirobe,bangla,True,False
+bn_0018,Rabindranath Tagore,Ami Je Jalsagore,bangla,False,False
+bn_0019,Rabindranath Tagore,Bhenge Mor Ghorer Chabi,bangla,True,False
+bn_0020,Rabindranath Tagore,Diner Sheshey,bangla,True,False
+bn_0021,Rabindranath Tagore,Ei Udasi Haowar Pathe Pathe,bangla,True,False
+bn_0022,Rabindranath Tagore,Klanti Amar Khoma Koro,bangla,True,False
+bn_0023,Rabindranath Tagore,Shesh Parar Gaan,bangla,True,False
+bn_0024,Rabindranath Tagore,Tomar Holo Shuru,bangla,True,False
+bn_0025,Rabindranath Tagore,Tumi Kon Bhangoner Pothe,bangla,True,False
+bn_0026,Rabindranath Tagore,Gram Chhara Oi Ranga Matir,bangla,True,False
+bn_0027,Rabindranath Tagore,Majhe Majhe Tobo Dekha Pai,bangla,True,False
+bn_0028,Rabindranath Tagore,Sakhi Bhabona Kahare Bole,bangla,True,False
+bn_0029,Rabindranath Tagore,Tai Tomar Anondo Amar Por,bangla,True,False
+bn_0030,Rabindranath Tagore,Amar Hriday Tomar Apon,bangla,True,False
+bn_0031,Rabindranath Tagore,Bhalobashi Bhalobashi,bangla,True,False
+bn_0032,Rabindranath Tagore,Dheere Dheere Prane Amar,bangla,True,False
+bn_0033,Rabindranath Tagore,Jete Jete Pathe Holo Deri,bangla,True,False
+bn_0034,Rabindranath Tagore,Kotha Hote Baje,bangla,True,False
+bn_0035,Rabindranath Tagore,Megh Bole Jabo Jabo,bangla,True,False
+bn_0036,Rabindranath Tagore,Ogo Nodir Kul Kul,bangla,True,False
+bn_0037,Rabindranath Tagore,Rimjhim Ghanaghan,bangla,False,False
+bn_0038,Rabindranath Tagore,Sharat Tomar Arun,bangla,True,False
+bn_0039,Rabindranath Tagore,Tomay Niye,bangla,True,False
+bn_0040,Rabindranath Tagore,Bipul Torongo,bangla,True,False
+bn_0042,Kazi Nazrul Islam,Kandari Hushiar,bangla,True,False
+bn_0043,Kazi Nazrul Islam,Chol Chol Chol,bangla,True,False
+bn_0044,Kazi Nazrul Islam,Shukno Patar Nupur Paaye,bangla,True,False
+bn_0045,Kazi Nazrul Islam,Mora Jhonjhar Moto Uddam,bangla,True,False
+bn_0046,Kazi Nazrul Islam,O Mon Romzaner Oi,bangla,True,False
+bn_0047,Kazi Nazrul Islam,Jago Anidhrata Ugratara,bangla,False,False
+bn_0048,Kazi Nazrul Islam,Karar Oi Louho Kopat,bangla,True,False
+bn_0049,Kazi Nazrul Islam,Pinjor Poley,bangla,True,False
+bn_0050,Kazi Nazrul Islam,Dhano Dhanne Pushpe Bhora,bangla,True,False
+bn_0051,Kazi Nazrul Islam,Oi Mahasindhur,bangla,True,False
+bn_0052,Kazi Nazrul Islam,Bicharpoti Tomar Bichar,bangla,True,False
+bn_0053,Kazi Nazrul Islam,Tui Fele Eshechis Kare,bangla,True,False
+bn_0054,Kazi Nazrul Islam,Bidrohi,bangla,True,False
+bn_0055,Kazi Nazrul Islam,Shadhinata Tumi,bangla,True,False
+bn_0056,Kazi Nazrul Islam,Amar Apnar Cheye,bangla,True,False
+bn_0057,Kazi Nazrul Islam,Bhangar Gan,bangla,True,False
+bn_0058,Kazi Nazrul Islam,Chaad Mukhi Tor Elo Re,bangla,True,False
+bn_0059,Kazi Nazrul Islam,Daridro,bangla,True,False
+bn_0060,Kazi Nazrul Islam,Ebar Jawar Somoy Elo,bangla,True,False
+bn_0061,Kazi Nazrul Islam,Faguner O Mohona,bangla,True,False
+bn_0062,Kazi Nazrul Islam,Gahe Baul Gaan,bangla,True,False
+bn_0063,Kazi Nazrul Islam,Haat Baralei Kache,bangla,True,False
+bn_0064,Kazi Nazrul Islam,Jeno Nodi,bangla,True,False
+bn_0065,Kazi Nazrul Islam,Kom Kom Kom,bangla,True,False
+bn_0066,Kazi Nazrul Islam,Lichu Chor,bangla,True,False
+bn_0067,Kazi Nazrul Islam,Mora Ekti Phulke Bachabo,bangla,True,False
+bn_0068,Kazi Nazrul Islam,Nirjhor Jhor Jhor,bangla,True,False
+bn_0069,Kazi Nazrul Islam,O Je Mani AR Mani Na,bangla,True,False
+bn_0070,Kazi Nazrul Islam,Shyama Sangeet,bangla,True,False
+bn_0071,Kishore Kumar,Ei Raat Tomar Amar,bangla,True,False
+bn_0072,Hemanta Mukherjee,Ke Prothom Kache Esechi,bangla,True,False
+bn_0073,Manna Dey,Coffee Houser Shei Adda,bangla,True,False
+bn_0074,Kishore Kumar,Ami Parini Bujhite Parini,bangla,True,False
+bn_0075,Hemanta Mukherjee,O Majhi Re,bangla,True,False
+bn_0076,Manna Dey,Pothik Aaj Fironite,bangla,False,False
+bn_0077,Lata Mangeshkar,Aha Ki Anondo,bangla,True,False
+bn_0078,Hemanta Mukherjee,Jodi Jantem,bangla,True,False
+bn_0079,Kishore Kumar,Nil Nil Pakhi,bangla,True,False
+bn_0080,Hemanta Mukherjee,Aaj Gun Gun Gunje Amar,bangla,True,False
+bn_0081,Kishore Kumar,Tumi Ja Bolo Tai Bolo,bangla,True,False
+bn_0082,Manna Dey,Chaad Enechi Karar Badh,bangla,True,False
+bn_0083,Lata Mangeshkar,Aaji Jhorer Raate,bangla,True,False
+bn_0084,Kishore Kumar,Dur Paharar,bangla,True,False
+bn_0085,Hemanta Mukherjee,Megher Kole Rod Hese,bangla,True,False
+bn_0086,Sandhya Mukherjee,Ei Meghla Dine Ekla,bangla,True,False
+bn_0087,Asha Bhosle,Bolo To Arshi,bangla,True,False
+bn_0088,Geeta Dutt,Ei Path Jodi Na Sesh Hoy,bangla,True,False
+bn_0089,Shyamal Mitra,Ei Kathati Mone Rakhyo,bangla,True,False
+bn_0090,Satinath Mukherjee,Ekhono Tarai Dulechhe,bangla,False,False
+bn_0091,Arati Mukherjee,Amar Buker Modhye,bangla,False,False
+bn_0092,Kumar Sanu,Ek Jibon,bangla,True,False
+bn_0093,Alka Yagnik,Tomake Chai,bangla,True,False
+bn_0094,Sonu Nigam,Tumi Amar,bangla,True,False
+bn_0095,Shreya Ghoshal,Mon Majhi Re,bangla,True,False
+bn_0096,Arijit Singh,Tui ki Jane Na,bangla,True,False
+bn_0097,Shaan,Bojhena Shey Bojhena,bangla,True,False
+bn_0098,Rupam Islam,Beche Thakar Gaan,bangla,True,False
+bn_0099,Nachiketa,Brihonnola,bangla,True,False
+bn_0100,Anjan Dutta,Ranjana Ami Ar Ashbona,bangla,True,False
+bn_0101,Srikanto Acharya,Ekhon Onek Raat,bangla,True,False
+bn_0102,Indrani Sen,Meghbalika,bangla,True,False
+bn_0103,Srabani Sen,Tomar Ghore Bosot Kore,bangla,True,False
+bn_0104,Haimanti Shukla,Ei Meghla Dine,bangla,True,False
+bn_0105,Lopamudra Mitra,Tomake Bhalobashi,bangla,True,False
+bn_0106,Raghab Chatterjee,Esho Hey Boishakh,bangla,True,False
+bn_0108,Shreya Ghoshal,Aguner Parashmoni,bangla,True,False
+bn_0109,Arijit Singh,Ekbar Bol,bangla,True,False
+bn_0111,Fossils,Nemesis,bangla,True,False
+bn_0112,Fossils,Phirey Cholo,bangla,True,False
+bn_0113,Cactus,Holud Pakhi,bangla,True,False
+bn_0114,Cactus,Bhalo Achi Bhalo Theko,bangla,True,False
+bn_0115,Chandrabindoo,Tokai,bangla,True,False
+bn_0116,Chandrabindoo,Mongol Groho,bangla,True,False
+bn_0117,Bangla,Kingbodonti,bangla,True,False
+bn_0118,Bhoomi,Ekhon Onek Raat,bangla,True,False
+bn_0119,Bhoomi,Sadher Lau,bangla,False,False
+bn_0120,Fossils,Hasnuhana,bangla,True,False
+bn_0121,Cactus,Amra Bhishon Eka,bangla,True,False
+bn_0122,Chandrabindoo,Ekti Chithi,bangla,True,False
+bn_0123,Lakkhichhara,Shopno Beche Thakuk,bangla,True,False
+bn_0124,Bangla,Khnaro Bhalobashi,bangla,False,False
+bn_0125,Fossils,Omanush,bangla,True,False
+bn_0126,Moheener Ghoraguli,Prithibi Ta Naki Choto Hote Hote,bangla,True,False
+bn_0127,Moheener Ghoraguli,Haay Bhalobasha Kare Koy,bangla,True,False
+bn_0128,Souls,Aj Din Katuk Gane,bangla,True,False
+bn_0129,Souls,Mon Shudhu Mon Cheyeche,bangla,True,False
+bn_0130,LRB,Cholo Bodle Jai,bangla,True,False
+bn_0131,LRB,Ghum Bhanga Shohor,bangla,True,False
+bn_0132,Warfaze,Boshe Achi,bangla,True,False
+bn_0138,Aurthohin,Nikrishto,bangla,True,False
+bn_0141,Lalon,Milon Hobe Koto Dine,bangla,True,False
+bn_0142,Lalon,Khacchar Bhitor Ochin Pakhi,bangla,True,False
+bn_0143,Purna Das Baul,Sohag Chand Bodoni,bangla,True,False
+bn_0144,Lalon,Amar Ghore Khachar Mon,bangla,True,False
+bn_0145,Lalon,Ami Kothay Pabo Tare,bangla,True,False
+bn_0146,Lalon,Jat Gelo Jat Gelo,bangla,True,False
+bn_0147,Baul Fakir,Murshid Dhoro Re Mon,bangla,True,False
+bn_0148,Purna Das Baul,Pagol Mon Mon Re,bangla,True,False
+bn_0149,Lalon,Deho Tori Bondha Lalon Boye,bangla,True,False
+bn_0150,Lalon,Tin Pagoler Holo Mela,bangla,True,False
+bn_0151,Rabindranath Tagore,Ekla Chalo Re,bangla,True,False
+bn_0153,Rabindranath Tagore,Ami Chini Go Chini,bangla,True,False
+bn_0154,Rabindranath Tagore,Aguner Parashmani,bangla,True,False
+bn_0155,Rabindranath Tagore,Jodi Tor Dak Shune,bangla,True,False
+bn_0156,Rabindranath Tagore,Phule Phule Dhole Dhole,bangla,True,False
+bn_0157,Rabindranath Tagore,Tumi Robe Nirobe,bangla,True,False
+bn_0158,Rabindranath Tagore,Akash Bhora Surjo Tara,bangla,True,False
+bn_0159,Rabindranath Tagore,Jete Jete Ekla Pathe,bangla,True,False
+bn_0160,Rabindranath Tagore,Aji Jhorer Raate,bangla,True,False
+bn_0161,Hemanta Mukherjee,Amay Proshno Kore,bangla,True,False
+bn_0162,Hemanta Mukherjee,Aguner Poroshmoni,bangla,True,False
+bn_0163,Debabrata Biswas,Purano Sei Diner Kotha,bangla,True,False
+bn_0164,Debabrata Biswas,Amar Hiyar Majhe,bangla,True,False
+bn_0165,Suchitra Mitra,Shokhi Bhabona Kahare Bole,bangla,True,False
+bn_0166,Suchitra Mitra,Ore Grihoboashi,bangla,False,False
+bn_0167,Pankaj Mullick,Diner Sheshe Ghumer Deshe,bangla,True,False
+bn_0168,Subir Sen,Akash Amai Bhorlo Aloi,bangla,True,False
+bn_0169,Kanika Bandyopadhyay,Mon Mor Megher Sangi,bangla,True,False
+bn_0170,Dwijen Mukhopadhyay,Tomar Holo Shuru,bangla,True,False
+bn_0171,Rabindranath Tagore,Amaro Porano Jaha Chay,bangla,True,False
+bn_0172,Rabindranath Tagore,Jedin Prothom Dhonai,bangla,True,False
+bn_0173,Rabindranath Tagore,Prothom Dekha,bangla,True,False
+bn_0174,Rabindranath Tagore,Tumi Kon Bhangoner Pothe,bangla,True,False
+bn_0175,Rabindranath Tagore,Klanti Amar Khoma Koro,bangla,True,False
+bn_0176,Kazi Nazrul Islam,Shukno Patar Nupur Paye,bangla,True,False
+bn_0177,Kazi Nazrul Islam,Karar Oi Louho Kopat,bangla,True,False
+bn_0178,Kazi Nazrul Islam,Chol Chol Chol,bangla,True,False
+bn_0180,Kazi Nazrul Islam,Kandari Hushiar,bangla,True,False
+bn_0181,Firoza Begum,Amar Apnar Cheye,bangla,True,False
+bn_0182,Firoza Begum,Phool Phutuk Na Phutuk,bangla,True,False
+bn_0183,Manabendra Mukhopadhyay,Coffee Houser Sei Addata,bangla,True,False
+bn_0184,Manabendra Mukhopadhyay,Ogo Sundor,bangla,True,False
+bn_0185,Dhiren Bose,Bidrohi,bangla,True,False
+bn_0186,Kazi Nazrul Islam,Mora Jhonjer Moto,bangla,True,False
+bn_0187,Kazi Nazrul Islam,Tora Shunish Kinara,bangla,True,False
+bn_0188,Kazi Nazrul Islam,Dhono Dhanne Pushpe Bhora,bangla,True,False
+bn_0189,Kazi Nazrul Islam,Bicharpoti Tomar Bichar,bangla,True,False
+bn_0190,Kazi Nazrul Islam,Ami Sei Din Habo Shobodhan,bangla,False,False
+bn_0191,Dhiren Bose,Jago Anidhon,bangla,False,False
+bn_0192,Suprava Sarkar,Mor Ghumer Ghore,bangla,True,False
+bn_0193,Angurbala,Shyama Sangeet,bangla,True,False
+bn_0194,Indubala,Prem Pagol Mon,bangla,True,False
+bn_0195,Abbasuddin Ahmed,O Mon Romzaner Oi Rojar Sheshe,bangla,True,False
+bn_0196,Kishore Kumar,Ei Raat Tomar Amar,bangla,True,False
+bn_0197,Kishore Kumar,Amar Majhe Nei to Kichhu Nei,bangla,True,False
+bn_0198,Manna Dey,Jago Mohan Pyare,bangla,True,False
+bn_0199,Manna Dey,Aaj Sakaler Dak,bangla,True,False
+bn_0200,Sandhya Mukhopadhyay,Aaj Mon Cheyeche,bangla,True,False
+bn_0201,Sandhya Mukhopadhyay,Ogo Tomar Sesh Bicharer Aasone,bangla,False,False
+en_0028,Justin Timberlake,Can't Stop the Feeling,english,False,False
+en_0029,P!nk,Just Give Me a Reason,english,True,False
+en_0037,James Arthur,Say You Won't Let Go,english,False,False
+en_0043,Megan Thee Stallion,Savage,english,False,True
+en_0045,Jason Derulo,Savage Love,english,True,False
+en_0047,Chainsmokers,Closer,english,True,False
+en_0058,Khalid,Young Dumb & Broke,english,False,False
+en_0062,AC/DC,Back in Black,english,True,False
+en_0064,Guns N' Roses,Sweet Child O' Mine,english,False,False
+en_0076,Bon Jovi,Livin' on a Prayer,english,False,False
+en_0077,Journey,Don't Stop Believin',english,False,False
+en_0082,The Who,Baba O'Riley,english,False,False
+en_0095,The Killers,Mr. Brightside,english,False,False
+en_0103,System of a Down,Chop Suey!,english,False,False
+en_0114,No Doubt,Don't Speak,english,False,False
+en_0116,Fall Out Boy,"Sugar, We're Goin Down",english,False,False
+en_0122,Drake,God's Plan,english,False,False
+en_0123,Kendrick Lamar,HUMBLE.,english,False,False
+en_0131,Snoop Dogg,Drop It Like It's Hot,english,False,False
+en_0132,Dr. Dre,Still D.R.E.,english,False,False
+en_0140,Macklemore,Can't Hold Us,english,False,False
+en_0141,A$AP Rocky,Praise the Lord,english,True,False
+en_0148,XXXTentacion,SAD!,english,False,False
+en_0158,Lil Baby,Drip Too Hard,english,True,False
+en_0170,Swedish House Mafia,Don't You Worry Child,english,False,False
+en_0171,deadmau5,Strobe,english,True,False
+en_0173,Diplo,Lean On,english,True,False
+en_0176,Tiësto,Red Lights,english,True,False
+en_0178,Hardwell,Spaceman,english,True,False
+en_0180,Steve Aoki,Just Hold On,english,True,False
+en_0181,Dimitri Vegas & Like Mike,Tremor,english,True,False
+en_0183,Axwell Λ Ingrosso,More Than You Know,english,True,False
+en_0184,Oliver Heldens,Gecko,english,True,False
+en_0186,Nicky Romero,Toulouse,english,True,False
+en_0187,R3HAB,All Around the World,english,True,False
+en_0194,Galantis,Runaway,english,True,False
+en_0197,Porter Robinson,Shelter,english,True,False
+en_0201,Beyoncé,Halo,english,True,False
+en_0203,Alicia Keys,Fallin',english,False,False
+en_0206,The Weeknd,Can't Feel My Face,english,False,False
+en_0211,Bruno Mars,That's What I Like,english,False,False
+en_0212,Usher,Yeah!,english,False,False
+en_0218,Ty Dolla $ign,Paranoid,english,True,False
+en_0220,Bryson Tiller,Don't,english,False,False
+en_0221,Ella Mai,Boo'd Up,english,False,False
+en_0224,Jhené Aiko,The Worst,english,True,False
+en_0228,Janelle Monáe,Make Me Feel,english,True,False
+en_0231,Brent Faiyaz,Crew,english,True,False
+en_0237,Kali Uchis,Telepatía,english,True,False
+en_0238,Victoria Monét,Monopoly,english,True,False
+en_0245,Luke Bryan,Country Girl,english,True,False
+en_0247,Shania Twain,Man! I Feel Like a Woman!,english,False,False
+en_0248,Keith Urban,Blue Ain't Your Color,english,False,False
+en_0249,Blake Shelton,God's Country,english,False,False
+en_0260,Kenny Chesney,She Thinks My Tractor's Sexy,english,False,False
+en_0265,Miranda Lambert,Gunpowder & Lead,english,False,False
+en_0269,Brett Young,In Case You Didn't Know,english,False,False
+en_0276,Miles Davis,So What,english,True,False
+en_0277,John Coltrane,Giant Steps,english,True,False
+en_0283,Duke Ellington,Take the A Train,english,True,False
+en_0284,Charlie Parker,Ornithology,english,True,False
+en_0285,Dizzy Gillespie,A Night in Tunisia,english,True,False
+en_0286,Thelonious Monk,Round Midnight,english,True,False
+en_0287,Herbie Hancock,Chameleon,english,True,False
+en_0288,Wayne Shorter,Footprints,english,True,False
+en_0289,Bill Evans,Waltz for Debby,english,True,False
+en_0290,Dave Brubeck,Take Five,english,True,False
+en_0295,Buddy Guy,"Damn Right, I've Got the Blues",english,False,False
+en_0298,Jimi Hendrix,Red House,english,True,False
+en_0309,Bruno Mars,Uptown Funk,english,True,False
+en_0319,Dua Lipa,Don't Start Now,english,False,False
+en_0328,Sam Smith,Unholy,english,True,False
+en_0329,Shawn Mendes,Senorita,english,True,False
+en_0342,Queen,Don't Stop Me Now,english,False,False
+en_0343,AC/DC,Highway to Hell,english,True,False
+en_0344,AC/DC,Thunderstruck,english,True,False
+en_0362,Linkin Park,What I've Done,english,False,False
+en_0371,Drake,God's Plan,english,False,False
+en_0388,Lil Nas X,MONTERO,english,True,False
+en_0393,Lil Baby,Drip Too Hard,english,True,False
+en_0412,Kygo,It Ain't Me,english,False,False
+en_0421,Beyoncé,Halo,english,True,False
+en_0422,Beyoncé,Crazy in Love,english,True,False
+en_0428,H.E.R.,Best Part,english,True,False
+en_0430,Anderson .Paak,Leave the Door Open,english,True,False
+en_0431,Alicia Keys,If I Ain't Got You,english,False,False
+en_0435,Usher,Yeah!,english,False,False
+en_0442,Louis Armstrong,"Hello, Dolly!",english,False,False
+en_0449,Miles Davis,So What,english,True,False
+en_0450,John Coltrane,Blue Train,english,True,False
+en_0451,Shakira,Hips Don't Lie,english,False,False
+en_0452,Shakira,Waka Waka,english,True,False
+en_0459,Celine Dion,My Heart Will Go On,english,True,False
+en_0467,Bon Jovi,It's My Life,english,False,False
+en_0480,The Chainsmokers,Don't Let Me Down,english,False,False
+en_0481,The Killers,Mr. Brightside,english,False,False
+en_0488,Oasis,Don't Look Back in Anger,english,False,False
+en_0499,Weezer,Say It Ain't So,english,False,False
+en_0501,Snoop Dogg,Drop It Like It's Hot,english,False,False
+en_0505,Dr. Dre,Still D.R.E.,english,False,False
+en_0512,OutKast,Ms. Jackson,english,False,False
+en_0513,Nas,N.Y. State of Mind,english,False,False
+en_0518,A$AP Rocky,Praise the Lord,english,True,False
+en_0521,Deadmau5,Strobe,english,True,False
+en_0522,Deadmau5,Ghosts 'n' Stuff,english,False,False
+en_0525,Swedish House Mafia,Don't You Worry Child,english,False,False
+en_0528,Clean Bandit,Symphony,english,False,True
+en_0535,Blake Shelton,God's Country,english,False,False
+en_0540,Keith Urban,Blue Ain't Your Color,english,False,False
+es_0001,Shakira,Hips Don't Lie,spanish,False,False
+es_0002,Shakira,Waka Waka,spanish,True,False
+es_0006,Ricky Martin,Livin' La Vida Loca,spanish,False,False
+es_0014,Jennifer Lopez,Ain't Your Mama,spanish,False,False
+es_0016,Marc Anthony,Valió La Pena,spanish,True,False
+es_0023,Daddy Yankee,Dura,spanish,False,True
+es_0033,Ozuna,Taki Taki,spanish,True,False
+es_0038,Wisin,Escápate Conmigo,spanish,True,False
+es_0039,Wisin & Yandel,Rakata,spanish,True,False
+es_0044,Farruko,Calma,spanish,True,False
+es_0048,Anuel AA,Ella Quiere Beber,spanish,True,False
+es_0049,Anuel AA,China,spanish,True,False
+es_0052,Rosalía,Malamente,spanish,True,False
+es_0053,Rosalía,Con Altura,spanish,True,False
+es_0054,Rosalía,Despecha,spanish,True,False
+es_0060,Camilo,Tutu,spanish,True,False
+es_0063,Carlos Vives,Volví a Nacer,spanish,True,False
+es_0077,Christian Nodal,Adiós Amor,spanish,True,False
+es_0080,Banda MS,Mi Razon de Ser,spanish,True,False
+es_0087,Mon Laferte,Tu Falta de Querer,spanish,False,True
+es_0088,Mon Laferte,Amárrame,spanish,True,False
+es_0089,Ximena Sariñana,Mediocre,spanish,True,False
+es_0090,Jesse & Joy,Corre,spanish,True,False
+es_0091,Jesse & Joy,Espacio Sideral,spanish,True,False
+es_0092,Reik,Ya Me Enteré,spanish,True,False
+es_0094,Pablo Alborán,Solamente Tú,spanish,True,False
+es_0095,Pablo Alborán,Perdóname,spanish,True,False
+es_0097,David Bisbal,Bulería,spanish,True,False
+es_0098,Alejandro Sanz,Corazón Partío,spanish,False,False
+es_0100,Alejandro Sanz,Y ¿Si Fuera Ella?,spanish,False,False
+es_0101,Gloria Estefan,Conga,spanish,True,False
+es_0106,Thalia,No Me Enseñaste,spanish,True,False
+es_0111,RBD,Sálvame,spanish,True,False
+es_0112,Maná,Clavado en un Bar,spanish,True,False
+es_0113,Enanitos Verdes,Lamento Boliviano,spanish,True,False
+es_0114,Soda Stereo,De Música Ligera,spanish,True,False
+es_0118,Café Tacvba,Eres,spanish,True,False
+es_0119,Zoé,Soñé,spanish,True,False
+es_0120,Zoé,Love,spanish,True,False
+es_0125,Enrique Iglesias,Nunca Te Olvidaré,spanish,True,False
+es_0127,Abraham Mateo,Señorita,spanish,True,False
+es_0128,Sebastián Yatra,Traicionera,spanish,True,False
+es_0129,Sebastián Yatra,Runaway,spanish,True,False
+es_0130,Sebastián Yatra,Pareja del Año,spanish,True,False
+es_0131,Morat,Cómo Te Atreves,spanish,True,False
+es_0133,CNCO,Reggaetón Lento,spanish,True,False
+es_0134,CNCO,Tan Fácil,spanish,True,False
+es_0137,Wisin & Yandel,Algo Me Gusta de Ti,spanish,True,False
+es_0138,Wisin & Yandel,Pam Pam,spanish,True,False
+es_0140,Natti Natasha,Sin Pijama,spanish,True,False
+es_0142,Ozuna,Criminal,spanish,True,False
+es_0144,Manuel Turizo,Vaina Loca,spanish,True,False
+es_0145,Maluma,Borró Cassette,spanish,True,False
+es_0146,Maluma,Medellín,spanish,True,False
+es_0157,Nicky Jam,Te Busco,spanish,True,False
+es_0159,Karol G,Secreto,spanish,True,False
+es_0160,Anuel AA,Secreto,spanish,True,False
+es_0161,Anuel AA,Adicto,spanish,True,False
+es_0164,Rosalía,Pienso en Tu Mirá,spanish,True,False
+es_0165,Rosalía,Bagdad,spanish,True,False
+es_0166,C. Tangana,Tú Me Dejaste de Querer,spanish,True,False
+es_0169,Myke Towers,Bandido,spanish,True,False
+es_0171,Sech,Relación,spanish,True,False
+es_0174,Rauw Alejandro,2/Catorce,spanish,False,False
+es_0175,Bizarrap,Music Sessions #53,spanish,False,False
+es_0176,Bizarrap,Music Sessions #52,spanish,False,False
+es_0178,Paulo Londra,Adán y Eva,spanish,True,False
+es_0180,Tiago PZK,Salimo de Noche,spanish,True,False
+es_0182,Maria Becerra,Qué Más Pues?,spanish,True,False
+es_0183,Emilia,No se ve,spanish,True,False
+es_0185,Feid,Porfa,spanish,True,False
+es_0186,Feid,Feliz Cumpleaños Ferxxo,spanish,True,False
+es_0190,Jhayco,Sensual Bebé,spanish,True,False
+es_0191,Rauw Alejandro,Punto 40,spanish,True,False
+es_0192,Mora,IA,spanish,True,False
+es_0194,Lenny Tavárez,Fantasias,spanish,True,False
+es_0195,Nio Garcia,Te Boté,spanish,True,False
+es_0196,Casper Mágico,Te Boté,spanish,True,False
+es_0198,Ovy On The Drums,Caramelo Remix,spanish,True,False
+hi_0001,Lata Mangeshkar,Lag Ja Gale,hindi,True,False
+hi_0002,Kishore Kumar,Mere Sapno Ki Rani,hindi,True,False
+hi_0004,Asha Bhosle,Dum Maro Dum,hindi,True,False
+hi_0007,Mohammed Rafi,Kya Hua Tera Wada,hindi,True,False
+hi_0008,Lata Mangeshkar,Ajeeb Dastan Hai Yeh,hindi,True,False
+hi_0009,Kishore Kumar,Kuch To Log Kahenge,hindi,True,False
+hi_0014,Mohammed Rafi,Baharon Phool Barsao,hindi,True,False
+hi_0016,Kishore Kumar,Yeh Shaam Mastani,hindi,True,False
+hi_0017,Asha Bhosle,Chura Liya Hai Tumne,hindi,True,False
+hi_0018,Lata Mangeshkar,Kabhi Kabhi Mere Dil Mein,hindi,True,False
+hi_0019,Kishore Kumar,Ek Ladki Ko Dekha,hindi,True,False
+hi_0021,Arijit Singh,Tum Hi Ho,hindi,True,False
+hi_0022,Shreya Ghoshal,Teri Meri,hindi,True,False
+hi_0025,Arijit Singh,Ae Dil Hai Mushkil,hindi,True,False
+hi_0030,Sunidhi Chauhan,Sheila Ki Jawani,hindi,True,False
+hi_0032,Armaan Malik,Sab Tera,hindi,True,False
+hi_0033,Neha Kakkar,Dilbar,hindi,True,False
+hi_0045,Guru Randhawa,Lahore,hindi,True,False
+hi_0046,Neha Kakkar,Manali Trance,hindi,True,False
+hi_0051,Neha Kakkar,Kala Chashma,hindi,True,False
+hi_0055,Guru Randhawa,Suit Suit,hindi,True,False
+hi_0056,Neha Kakkar,O Saki Saki,hindi,True,False
+hi_0058,Yo Yo Honey Singh,Angrezi Beat,hindi,True,False
+hi_0064,A.R. Rahman,Agar Tum Saath Ho,hindi,True,False
+hi_0068,Amit Trivedi,Udta Punjab,hindi,True,False
+hi_0070,Pritam,Ae Watan,hindi,True,False
+hi_0071,Vishal Bhardwaj,Bismil,hindi,True,False
+hi_0072,Amit Trivedi,Manmarziyan,hindi,True,False
+hi_0077,A.R. Rahman,Vande Mataram,hindi,True,False
+hi_0082,KK,Pal,hindi,True,False
+hi_0083,Mohit Chauhan,Dooba Dooba,hindi,True,False
+hi_0084,Euphoria,Dhoom Pichak Dhoom,hindi,True,False
+hi_0089,Jal,Woh Lamhe,hindi,True,False
+hi_0091,Mohit Chauhan,Maeri,hindi,True,False

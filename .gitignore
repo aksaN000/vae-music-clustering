@@ -1,0 +1,77 @@
+# .gitignore for VAE Music Clustering Project
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# Add custom virtual environment
+venv312_new/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Ignore large or generated folders
+balancedData/
+data_original_backup/
+archive_scripts/
+results/
+
+# Data (too large for git)
+data/audio/**/*.mp3
+data/audio/**/*.wav
+data/audio/**/*.flac
+data/audio/**/*.m4a
+data/audio/**/*.ogg
+data/features/*.pkl
+data/cache/
+
+# Model checkpoints (too large)
+results/checkpoints/**/*.pt
+*.pth
+*.ckpt
+
+# Logs
+*.log
+logs/
+wandb/
+tensorboard_logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
