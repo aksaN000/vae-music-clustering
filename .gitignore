@@ -1,5 +1,3 @@
-# .gitignore for VAE Music Clustering Project
-
 # Python
 __pycache__/
 *.py[cod]
@@ -21,18 +19,15 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-MANIFEST
 
-# Virtual environments
+# Virtual Environment
 venv/
-env/
+venv312_new/
 ENV/
+env/
 .venv
 
-# Add custom virtual environment
-venv312_new/
-
-# IDE
+# IDEs
 .vscode/
 .idea/
 *.swp
@@ -41,37 +36,45 @@ venv312_new/
 
 # Jupyter Notebook
 .ipynb_checkpoints
+*.ipynb
 
-# Ignore large or generated folders
-balancedData/
-data_original_backup/
-archive_scripts/
-results/
-
-# Data (too large for git)
-data/audio/**/*.mp3
-data/audio/**/*.wav
-data/audio/**/*.flac
-data/audio/**/*.m4a
-data/audio/**/*.ogg
+# Data and Features (large files)
 data/features/*.pkl
 data/cache/
+*.wav
+*.mp3
+*.flac
 
-# Model checkpoints (too large)
-results/checkpoints/**/*.pt
+# Model Checkpoints (large files)
+results/checkpoints/*/
+checkpoints/
+*.pt
 *.pth
 *.ckpt
+*.h5
+
+# Results and Visualizations
+results/evaluations/*.csv
+results/visualizations/*/*.png
+results/visualizations/*/*.pdf
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
 
 # Logs
 *.log
 logs/
 wandb/
-tensorboard_logs/
-
-# OS
-.DS_Store
-Thumbs.db
+tensorboard/
 
 # Temporary files
 *.tmp
 *.temp
+.cache/
+
+# Datasets (keep structure but not files)
+!data/audio/.gitkeep
+!data/lyrics/.gitkeep
+!data/features/.gitkeep

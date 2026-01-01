@@ -1,0 +1,35 @@
+================================================================================
+VISUALIZATION SUMMARY REPORT
+================================================================================
+
+OVERALL STATISTICS
+--------------------------------------------------------------------------------
+Total Models: 7
+Total Experiments: 42
+Tasks: language, genre
+Methods: kmeans, agglomerative, gmm
+
+BEST PERFORMERS
+--------------------------------------------------------------------------------
+
+Best SILHOUETTE: 0.1647
+  Model: Conv VAE
+  Task: genre
+  Method: agglomerative
+
+Best ARI: 0.0212
+  Model: CVAE-Genre
+  Task: language
+  Method: gmm
+
+Best NMI: 0.0539
+  Model: Multimodal VAE
+  Task: language
+  Method: gmm
+
+Best V_MEASURE: 0.0539
+  Model: Multimodal VAE
+  Task: language
+  Method: gmm
+
+================================================================================

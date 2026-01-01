@@ -1,0 +1,74 @@
+================================================================================
+EVALUATION REPORT: Basic VAE
+================================================================================
+
+Model Type: Basic VAE
+Latent Dimension: 128
+Checkpoint: basic/final_model.pt
+
+--------------------------------------------------------------------------------
+CLUSTERING RESULTS
+--------------------------------------------------------------------------------
+
+
+========================================
+Task: LANGUAGE Classification
+========================================
+
+
+KMEANS Clustering:
+  Silhouette Score:      0.0100
+  Davies-Bouldin Index:  5.9294
+  Calinski-Harabasz:     2.68
+  Adjusted Rand Index:   -0.0129
+  Normalized Mutual Info: 0.0043
+  V-Measure Score:       0.0043
+
+AGGLOMERATIVE Clustering:
+  Silhouette Score:      0.0093
+  Davies-Bouldin Index:  5.8901
+  Calinski-Harabasz:     2.55
+  Adjusted Rand Index:   -0.0046
+  Normalized Mutual Info: 0.0144
+  V-Measure Score:       0.0144
+
+GMM Clustering:
+  Silhouette Score:      -0.0017
+  Davies-Bouldin Index:  6.3332
+  Calinski-Harabasz:     2.23
+  Adjusted Rand Index:   0.0115
+  Normalized Mutual Info: 0.0306
+  V-Measure Score:       0.0306
+
+========================================
+Task: GENRE Classification
+========================================
+
+
+KMEANS Clustering:
+  Silhouette Score:      0.0109
+  Davies-Bouldin Index:  6.2932
+  Calinski-Harabasz:     2.79
+  Adjusted Rand Index:   -0.0069
+  Normalized Mutual Info: 0.0032
+  V-Measure Score:       0.0032
+
+AGGLOMERATIVE Clustering:
+  Silhouette Score:      0.0099
+  Davies-Bouldin Index:  6.7090
+  Calinski-Harabasz:     2.59
+  Adjusted Rand Index:   -0.0052
+  Normalized Mutual Info: 0.0049
+  V-Measure Score:       0.0049
+
+GMM Clustering:
+  Silhouette Score:      0.0042
+  Davies-Bouldin Index:  6.7358
+  Calinski-Harabasz:     2.51
+  Adjusted Rand Index:   -0.0018
+  Normalized Mutual Info: 0.0070
+  V-Measure Score:       0.0070
+
+================================================================================
+END OF REPORT
+================================================================================

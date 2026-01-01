@@ -1,0 +1,74 @@
+================================================================================
+EVALUATION REPORT: CVAE-Language
+================================================================================
+
+Model Type: CVAE-Language
+Latent Dimension: 128
+Checkpoint: cvae_language/final_model.pt
+
+--------------------------------------------------------------------------------
+CLUSTERING RESULTS
+--------------------------------------------------------------------------------
+
+
+========================================
+Task: LANGUAGE Classification
+========================================
+
+
+KMEANS Clustering:
+  Silhouette Score:      0.0110
+  Davies-Bouldin Index:  5.8493
+  Calinski-Harabasz:     2.80
+  Adjusted Rand Index:   -0.0017
+  Normalized Mutual Info: 0.0164
+  V-Measure Score:       0.0164
+
+AGGLOMERATIVE Clustering:
+  Silhouette Score:      0.0097
+  Davies-Bouldin Index:  5.7319
+  Calinski-Harabasz:     2.77
+  Adjusted Rand Index:   0.0125
+  Normalized Mutual Info: 0.0331
+  V-Measure Score:       0.0331
+
+GMM Clustering:
+  Silhouette Score:      0.0129
+  Davies-Bouldin Index:  5.3914
+  Calinski-Harabasz:     2.60
+  Adjusted Rand Index:   -0.0031
+  Normalized Mutual Info: 0.0178
+  V-Measure Score:       0.0178
+
+========================================
+Task: GENRE Classification
+========================================
+
+
+KMEANS Clustering:
+  Silhouette Score:      0.0128
+  Davies-Bouldin Index:  6.2193
+  Calinski-Harabasz:     3.13
+  Adjusted Rand Index:   0.0197
+  Normalized Mutual Info: 0.0277
+  V-Measure Score:       0.0277
+
+AGGLOMERATIVE Clustering:
+  Silhouette Score:      0.0090
+  Davies-Bouldin Index:  6.6161
+  Calinski-Harabasz:     2.85
+  Adjusted Rand Index:   -0.0094
+  Normalized Mutual Info: 0.0014
+  V-Measure Score:       0.0014
+
+GMM Clustering:
+  Silhouette Score:      0.0110
+  Davies-Bouldin Index:  6.2907
+  Calinski-Harabasz:     2.87
+  Adjusted Rand Index:   0.0006
+  Normalized Mutual Info: 0.0136
+  V-Measure Score:       0.0136
+
+================================================================================
+END OF REPORT
+================================================================================

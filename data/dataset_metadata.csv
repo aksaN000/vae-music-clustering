@@ -1,0 +1,181 @@
+song_id,title,language,genre,filename,audio_path,lyrics_path,has_lyrics
+ar_0017,Tamally Maak,arabic,pop,ar_0017_Tamally_Maak.mp3,audio/arabic/pop/ar_0017_Tamally_Maak.mp3,lyrics/arabic/ar_0017.txt,True
+ar_0019,Akhasmak Ah,arabic,pop,ar_0019_Akhasmak_Ah.mp3,audio/arabic/pop/ar_0019_Akhasmak_Ah.mp3,lyrics/arabic/ar_0019.txt,True
+ar_0023,Omry Ebtada,arabic,pop,ar_0023_Omry_Ebtada.mp3,audio/arabic/pop/ar_0023_Omry_Ebtada.mp3,lyrics/arabic/ar_0023.txt,True
+ar_0025,Ah Ya Leil,arabic,pop,ar_0025_Ah_Ya_Leil.mp3,audio/arabic/pop/ar_0025_Ah_Ya_Leil.mp3,lyrics/arabic/ar_0025.txt,True
+ar_0029,Amarain,arabic,pop,ar_0029_Amarain.mp3,audio/arabic/pop/ar_0029_Amarain.mp3,lyrics/arabic/ar_0029.txt,True
+ar_0033,180 Darga,arabic,pop,ar_0033_180_Darga.mp3,audio/arabic/pop/ar_0033_180_Darga.mp3,lyrics/arabic/ar_0033.txt,True
+ar_0050,Qusad Einy,arabic,pop,ar_0050_Qusad_Einy.mp3,audio/arabic/pop/ar_0050_Qusad_Einy.mp3,lyrics/arabic/ar_0050.txt,True
+ar_0053,Majnoun,arabic,pop,ar_0053_Majnoun.mp3,audio/arabic/pop/ar_0053_Majnoun.mp3,lyrics/arabic/ar_0053.txt,True
+ar_0070,Sidi Mansour,arabic,pop,ar_0070_Sidi_Mansour.mp3,audio/arabic/pop/ar_0070_Sidi_Mansour.mp3,lyrics/arabic/ar_0070.txt,True
+ar_0087,Shababeek,arabic,pop,ar_0087_Shababeek.mp3,audio/arabic/pop/ar_0087_Shababeek.mp3,lyrics/arabic/ar_0087.txt,True
+ar_0302,Akhasmak Ah,arabic,pop,ar_0302_Akhasmak_Ah.mp3,audio/arabic/pop/ar_0302_Akhasmak_Ah.mp3,lyrics/arabic/ar_0302.txt,True
+ar_0306,Ya Tabtab,arabic,pop,ar_0306_Ya_Tabtab.mp3,audio/arabic/pop/ar_0306_Ya_Tabtab.mp3,lyrics/arabic/ar_0306.txt,True
+ar_0307,Yay,arabic,pop,ar_0307_Yay.mp3,audio/arabic/pop/ar_0307_Yay.mp3,lyrics/arabic/ar_0307.txt,True
+ar_0309,Ya Salam,arabic,pop,ar_0309_Ya_Salam.mp3,audio/arabic/pop/ar_0309_Ya_Salam.mp3,lyrics/arabic/ar_0309.txt,True
+ar_0319,Amarain,arabic,pop,ar_0319_Amarain.mp3,audio/arabic/pop/ar_0319_Amarain.mp3,lyrics/arabic/ar_0319.txt,True
+ar_0098,Fasateen,arabic,rock,ar_0098_Fasateen.mp3,audio/arabic/rock/ar_0098_Fasateen.mp3,lyrics/arabic/ar_0098.txt,True
+ar_0099,Shim El Yasmine,arabic,rock,ar_0099_Shim_El_Yasmine.mp3,audio/arabic/rock/ar_0099_Shim_El_Yasmine.mp3,lyrics/arabic/ar_0099.txt,True
+ar_0326,Ya Rayah,arabic,rock,ar_0326_Ya_Rayah.mp3,audio/arabic/rock/ar_0326_Ya_Rayah.mp3,lyrics/arabic/ar_0326.txt,True
+ar_0327,Barra Barra,arabic,rock,ar_0327_Barra_Barra.mp3,audio/arabic/rock/ar_0327_Barra_Barra.mp3,lyrics/arabic/ar_0327.txt,True
+ar_0328,Rock El Casbah,arabic,rock,ar_0328_Rock_El_Casbah.mp3,audio/arabic/rock/ar_0328_Rock_El_Casbah.mp3,lyrics/arabic/ar_0328.txt,True
+ar_0329,Voila Voila,arabic,rock,ar_0329_Voila_Voila.mp3,audio/arabic/rock/ar_0329_Voila_Voila.mp3,lyrics/arabic/ar_0329.txt,True
+ar_0330,Ecoute Moi Camarade,arabic,rock,ar_0330_Ecoute_Moi_Camarade.mp3,audio/arabic/rock/ar_0330_Ecoute_Moi_Camarade.mp3,lyrics/arabic/ar_0330.txt,True
+ar_0332,Blad Schizo,arabic,rock,ar_0332_Blad_Schizo.mp3,audio/arabic/rock/ar_0332_Blad_Schizo.mp3,lyrics/arabic/ar_0332.txt,True
+ar_0333,Trabando,arabic,rock,ar_0333_Trabando.mp3,audio/arabic/rock/ar_0333_Trabando.mp3,lyrics/arabic/ar_0333.txt,True
+ar_0334,Gnawa Blues,arabic,rock,ar_0334_Gnawa_Blues.mp3,audio/arabic/rock/ar_0334_Gnawa_Blues.mp3,lyrics/arabic/ar_0334.txt,True
+ar_0338,Dinosaur,arabic,rock,ar_0338_Dinosaur.mp3,audio/arabic/rock/ar_0338_Dinosaur.mp3,lyrics/arabic/ar_0338.txt,True
+ar_0339,Matloob Zaeem,arabic,rock,ar_0339_Matloob_Zaeem.mp3,audio/arabic/rock/ar_0339_Matloob_Zaeem.mp3,lyrics/arabic/ar_0339.txt,True
+ar_0340,Ethbat Makanak,arabic,rock,ar_0340_Ethbat_Makanak.mp3,audio/arabic/rock/ar_0340_Ethbat_Makanak.mp3,lyrics/arabic/ar_0340.txt,True
+ar_0343,Marboot Be Astek,arabic,rock,ar_0343_Marboot_Be_Astek.mp3,audio/arabic/rock/ar_0343_Marboot_Be_Astek.mp3,lyrics/arabic/ar_0343.txt,True
+ar_0344,El Keif,arabic,rock,ar_0344_El_Keif.mp3,audio/arabic/rock/ar_0344_El_Keif.mp3,lyrics/arabic/ar_0344.txt,True
+ar_0043,Mafia,arabic,hiphop,ar_0043_Mafia.mp3,audio/arabic/hiphop/ar_0043_Mafia.mp3,lyrics/arabic/ar_0043.txt,True
+ar_0044,Bent El Geran,arabic,hiphop,ar_0044_Bent_El_Geran.mp3,audio/arabic/hiphop/ar_0044_Bent_El_Geran.mp3,lyrics/arabic/ar_0044.txt,True
+ar_0046,El Bakht,arabic,hiphop,ar_0046_El_Bakht.mp3,audio/arabic/hiphop/ar_0046_El_Bakht.mp3,lyrics/arabic/ar_0046.txt,True
+ar_0351,Lm3Allem,arabic,hiphop,ar_0351_Lm3allem.mp3,audio/arabic/hiphop/ar_0351_Lm3allem.mp3,lyrics/arabic/ar_0351.txt,True
+ar_0352,Ghaltana,arabic,hiphop,ar_0352_Ghaltana.mp3,audio/arabic/hiphop/ar_0352_Ghaltana.mp3,lyrics/arabic/ar_0352.txt,True
+ar_0353,Casablanca,arabic,hiphop,ar_0353_Casablanca.mp3,audio/arabic/hiphop/ar_0353_Casablanca.mp3,lyrics/arabic/ar_0353.txt,True
+ar_0355,Salina Salina,arabic,hiphop,ar_0355_Salina_Salina.mp3,audio/arabic/hiphop/ar_0355_Salina_Salina.mp3,lyrics/arabic/ar_0355.txt,True
+ar_0358,Didi,arabic,hiphop,ar_0358_Didi.mp3,audio/arabic/hiphop/ar_0358_Didi.mp3,lyrics/arabic/ar_0358.txt,True
+ar_0359,Cest La Vie,arabic,hiphop,ar_0359_Cest_La_Vie.mp3,audio/arabic/hiphop/ar_0359_Cest_La_Vie.mp3,lyrics/arabic/ar_0359.txt,True
+ar_0362,Parisien Du Nord,arabic,hiphop,ar_0362_Parisien_Du_Nord.mp3,audio/arabic/hiphop/ar_0362_Parisien_Du_Nord.mp3,lyrics/arabic/ar_0362.txt,True
+ar_0363,Douha Alia,arabic,hiphop,ar_0363_Douha_Alia.mp3,audio/arabic/hiphop/ar_0363_Douha_Alia.mp3,lyrics/arabic/ar_0363.txt,True
+ar_0366,Number One,arabic,hiphop,ar_0366_Number_One.mp3,audio/arabic/hiphop/ar_0366_Number_One.mp3,lyrics/arabic/ar_0366.txt,True
+ar_0367,Mafia,arabic,hiphop,ar_0367_Mafia.mp3,audio/arabic/hiphop/ar_0367_Mafia.mp3,lyrics/arabic/ar_0367.txt,True
+ar_0368,Virus,arabic,hiphop,ar_0368_Virus.mp3,audio/arabic/hiphop/ar_0368_Virus.mp3,lyrics/arabic/ar_0368.txt,True
+ar_0371,Dorak Gai,arabic,hiphop,ar_0371_Dorak_Gai.mp3,audio/arabic/hiphop/ar_0371_Dorak_Gai.mp3,lyrics/arabic/ar_0371.txt,True
+en_0004,Levitating,english,pop,en_0004_Levitating.mp3,audio/english/pop/en_0004_Levitating.mp3,lyrics/english/en_0004.txt,True
+en_0006,Bad Guy,english,pop,en_0006_Bad_Guy.mp3,audio/english/pop/en_0006_Bad_Guy.mp3,lyrics/english/en_0006.txt,True
+en_0007,Perfect,english,pop,en_0007_Perfect.mp3,audio/english/pop/en_0007_Perfect.mp3,lyrics/english/en_0007.txt,True
+en_0009,Dance Monkey,english,pop,en_0009_Dance_Monkey.mp3,audio/english/pop/en_0009_Dance_Monkey.mp3,lyrics/english/en_0009.txt,True
+en_0014,Sucker,english,pop,en_0014_Sucker.mp3,audio/english/pop/en_0014_Sucker.mp3,lyrics/english/en_0014.txt,True
+en_0016,Flowers,english,pop,en_0016_Flowers.mp3,audio/english/pop/en_0016_Flowers.mp3,lyrics/english/en_0016.txt,True
+en_0020,Shivers,english,pop,en_0020_Shivers.mp3,audio/english/pop/en_0020_Shivers.mp3,lyrics/english/en_0020.txt,True
+en_0060,Heather,english,pop,en_0060_Heather.mp3,audio/english/pop/en_0060_Heather.mp3,lyrics/english/en_0060.txt,True
+en_0177,This Is What It Feels Like,english,pop,en_0177_This_Is_What_It_Feels_Like.mp3,audio/english/pop/en_0177_This_Is_What_It_Feels_Like.mp3,lyrics/english/en_0177.txt,True
+en_0198,Pop Culture,english,pop,en_0198_Pop_Culture.mp3,audio/english/pop/en_0198_Pop_Culture.mp3,lyrics/english/en_0198.txt,True
+en_0401,Summer,english,pop,en_0401_Summer.mp3,audio/english/pop/en_0401_Summer.mp3,lyrics/english/en_0401.txt,True
+en_0404,Without You,english,pop,en_0404_Without_You.mp3,audio/english/pop/en_0404_Without_You.mp3,lyrics/english/en_0404.txt,True
+en_0406,The Nights,english,pop,en_0406_The_Nights.mp3,audio/english/pop/en_0406_The_Nights.mp3,lyrics/english/en_0406.txt,True
+en_0455,Beautiful,english,pop,en_0455_Beautiful.mp3,audio/english/pop/en_0455_Beautiful.mp3,lyrics/english/en_0455.txt,True
+en_0523,Red Lights,english,pop,en_0523_Red_Lights.mp3,audio/english/pop/en_0523_Red_Lights.mp3,lyrics/english/en_0523.txt,True
+en_0031,Dream On,english,rock,en_0031_Dream_On.mp3,audio/english/rock/en_0031_Dream_On.mp3,lyrics/english/en_0031.txt,True
+en_0032,Dont Stop Believin,english,rock,en_0032_Dont_Stop_Believin.mp3,audio/english/rock/en_0032_Dont_Stop_Believin.mp3,lyrics/english/en_0032.txt,True
+en_0036,Welcome To The Jungle,english,rock,en_0036_Welcome_to_the_Jungle.mp3,audio/english/rock/en_0036_Welcome_to_the_Jungle.mp3,lyrics/english/en_0036.txt,True
+en_0039,Mr Brightside,english,rock,en_0039_Mr_Brightside.mp3,audio/english/rock/en_0039_Mr_Brightside.mp3,lyrics/english/en_0039.txt,True
+en_0040,Radioactive,english,rock,en_0040_Radioactive.mp3,audio/english/rock/en_0040_Radioactive.mp3,lyrics/english/en_0040.txt,True
+en_0043,Pumped Up Kicks,english,rock,en_0043_Pumped_Up_Kicks.mp3,audio/english/rock/en_0043_Pumped_Up_Kicks.mp3,lyrics/english/en_0043.txt,True
+en_0044,Take Me Out,english,rock,en_0044_Take_Me_Out.mp3,audio/english/rock/en_0044_Take_Me_Out.mp3,lyrics/english/en_0044.txt,True
+en_0048,Feel Good Inc,english,rock,en_0048_Feel_Good_Inc.mp3,audio/english/rock/en_0048_Feel_Good_Inc.mp3,lyrics/english/en_0048.txt,True
+en_0049,Do I Wanna Know,english,rock,en_0049_Do_I_Wanna_Know.mp3,audio/english/rock/en_0049_Do_I_Wanna_Know.mp3,lyrics/english/en_0049.txt,True
+en_0050,Lonely Boy,english,rock,en_0050_Lonely_Boy.mp3,audio/english/rock/en_0050_Lonely_Boy.mp3,lyrics/english/en_0050.txt,True
+en_0089,Purple Haze,english,rock,en_0089_Purple_Haze.mp3,audio/english/rock/en_0089_Purple_Haze.mp3,lyrics/english/en_0089.txt,True
+en_0252,My Church,english,rock,en_0252_My_Church.mp3,audio/english/rock/en_0252_My_Church.mp3,lyrics/english/en_0252.txt,True
+en_0351,Let It Be,english,rock,en_0351_Let_It_Be.mp3,audio/english/rock/en_0351_Let_It_Be.mp3,lyrics/english/en_0351.txt,True
+en_0487,Wonderwall,english,rock,en_0487_Wonderwall.mp3,audio/english/rock/en_0487_Wonderwall.mp3,lyrics/english/en_0487.txt,True
+en_0493,Man In The Box,english,rock,en_0493_Man_in_the_Box.mp3,audio/english/rock/en_0493_Man_in_the_Box.mp3,lyrics/english/en_0493.txt,True
+en_0056,Hotline Bling,english,hiphop,en_0056_Hotline_Bling.mp3,audio/english/hiphop/en_0056_Hotline_Bling.mp3,lyrics/english/en_0056.txt,True
+en_0057,Rap God,english,hiphop,en_0057_Rap_God.mp3,audio/english/hiphop/en_0057_Rap_God.mp3,lyrics/english/en_0057.txt,True
+en_0059,Lucid Dreams,english,hiphop,en_0059_Lucid_Dreams.mp3,audio/english/hiphop/en_0059_Lucid_Dreams.mp3,lyrics/english/en_0059.txt,True
+en_0061,No Role Modelz,english,hiphop,en_0061_No_Role_Modelz.mp3,audio/english/hiphop/en_0061_No_Role_Modelz.mp3,lyrics/english/en_0061.txt,True
+en_0063,Mask Off,english,hiphop,en_0063_Mask_Off.mp3,audio/english/hiphop/en_0063_Mask_Off.mp3,lyrics/english/en_0063.txt,True
+en_0065,Savage,english,hiphop,en_0065_Savage.mp3,audio/english/hiphop/en_0065_Savage.mp3,lyrics/english/en_0065.txt,True
+en_0068,Starboy,english,hiphop,en_0068_Starboy.mp3,audio/english/hiphop/en_0068_Starboy.mp3,lyrics/english/en_0068.txt,True
+en_0073,Super Freaky Girl,english,hiphop,en_0073_Super_Freaky_Girl.mp3,audio/english/hiphop/en_0073_Super_Freaky_Girl.mp3,lyrics/english/en_0073.txt,True
+en_0075,Jimmy Cooks,english,hiphop,en_0075_Jimmy_Cooks.mp3,audio/english/hiphop/en_0075_Jimmy_Cooks.mp3,lyrics/english/en_0075.txt,True
+en_0130,In Da Club,english,hiphop,en_0130_In_Da_Club.mp3,audio/english/hiphop/en_0130_In_Da_Club.mp3,lyrics/english/en_0130.txt,True
+en_0372,One Dance,english,hiphop,en_0372_One_Dance.mp3,audio/english/hiphop/en_0372_One_Dance.mp3,lyrics/english/en_0372.txt,True
+en_0378,Rap God,english,hiphop,en_0378_Rap_God.mp3,audio/english/hiphop/en_0378_Rap_God.mp3,lyrics/english/en_0378.txt,True
+en_0395,Rockstar,english,hiphop,en_0395_Rockstar.mp3,audio/english/hiphop/en_0395_Rockstar.mp3,lyrics/english/en_0395.txt,True
+en_0396,Bop,english,hiphop,en_0396_BOP.mp3,audio/english/hiphop/en_0396_BOP.mp3,lyrics/english/en_0396.txt,True
+en_0399,Lucid Dreams,english,hiphop,en_0399_Lucid_Dreams.mp3,audio/english/hiphop/en_0399_Lucid_Dreams.mp3,lyrics/english/en_0399.txt,True
+hi_0028,Tere Mast Mast Do Nain,hindi,pop,hi_0028_Tere_Mast_Mast_Do_Nain.mp3,audio/hindi/pop/hi_0028_Tere_Mast_Mast_Do_Nain.mp3,lyrics/hindi/hi_0028.txt,True
+hi_0034,Khairiyat,hindi,pop,hi_0034_Khairiyat.mp3,audio/hindi/pop/hi_0034_Khairiyat.mp3,lyrics/hindi/hi_0034.txt,True
+hi_0040,Abhi Mujh Mein Kahin,hindi,pop,hi_0040_Abhi_Mujh_Mein_Kahin.mp3,audio/hindi/pop/hi_0040_Abhi_Mujh_Mein_Kahin.mp3,lyrics/hindi/hi_0040.txt,True
+hi_0044,Dj Waley Babu,hindi,pop,hi_0044_DJ_Waley_Babu.mp3,audio/hindi/pop/hi_0044_DJ_Waley_Babu.mp3,lyrics/hindi/hi_0044.txt,True
+hi_0050,Paagal,hindi,pop,hi_0050_Paagal.mp3,audio/hindi/pop/hi_0050_Paagal.mp3,lyrics/hindi/hi_0050.txt,True
+hi_0059,Ban Ja Rani,hindi,pop,hi_0059_Ban_Ja_Rani.mp3,audio/hindi/pop/hi_0059_Ban_Ja_Rani.mp3,lyrics/hindi/hi_0059.txt,True
+hi_0063,Tere Bina,hindi,pop,hi_0063_Tere_Bina.mp3,audio/hindi/pop/hi_0063_Tere_Bina.mp3,lyrics/hindi/hi_0063.txt,True
+hi_0079,Made In India,hindi,pop,hi_0079_Made_in_India.mp3,audio/hindi/pop/hi_0079_Made_in_India.mp3,lyrics/hindi/hi_0079.txt,True
+hi_0086,Kabhi Aisa Lagta Hai,hindi,pop,hi_0086_Kabhi_Aisa_Lagta_Hai.mp3,audio/hindi/pop/hi_0086_Kabhi_Aisa_Lagta_Hai.mp3,lyrics/hindi/hi_0086.txt,True
+hi_0087,Duur,hindi,pop,hi_0087_Duur.mp3,audio/hindi/pop/hi_0087_Duur.mp3,lyrics/hindi/hi_0087.txt,True
+hi_0093,Wajah Tum Ho,hindi,pop,hi_0093_Wajah_Tum_Ho.mp3,audio/hindi/pop/hi_0093_Wajah_Tum_Ho.mp3,lyrics/hindi/hi_0093.txt,True
+hi_0109,Tera Ban Jaunga,hindi,pop,hi_0109_Tera_Ban_Jaunga.mp3,audio/hindi/pop/hi_0109_Tera_Ban_Jaunga.mp3,lyrics/hindi/hi_0109.txt,True
+hi_0111,Tujhe Kitna Chahne Lage,hindi,pop,hi_0111_Tujhe_Kitna_Chahne_Lage.mp3,audio/hindi/pop/hi_0111_Tujhe_Kitna_Chahne_Lage.mp3,lyrics/hindi/hi_0111.txt,True
+hi_0112,Bekhayali,hindi,pop,hi_0112_Bekhayali.mp3,audio/hindi/pop/hi_0112_Bekhayali.mp3,lyrics/hindi/hi_0112.txt,True
+hi_0118,Apna Bana Le,hindi,pop,hi_0118_Apna_Bana_Le.mp3,audio/hindi/pop/hi_0118_Apna_Bana_Le.mp3,lyrics/hindi/hi_0118.txt,True
+hi_0129,Jo Bhi Main,hindi,rock,hi_0129_Jo_Bhi_Main.mp3,audio/hindi/rock/hi_0129_Jo_Bhi_Main.mp3,lyrics/hindi/hi_0129.txt,True
+hi_0130,Phir Se Ud Chala,hindi,rock,hi_0130_Phir_Se_Ud_Chala.mp3,audio/hindi/rock/hi_0130_Phir_Se_Ud_Chala.mp3,lyrics/hindi/hi_0130.txt,True
+hi_0131,Nadaan Parindey,hindi,rock,hi_0131_Nadaan_Parindey.mp3,audio/hindi/rock/hi_0131_Nadaan_Parindey.mp3,lyrics/hindi/hi_0131.txt,True
+hi_0132,Khoon Chala,hindi,rock,hi_0132_Khoon_Chala.mp3,audio/hindi/rock/hi_0132_Khoon_Chala.mp3,lyrics/hindi/hi_0132.txt,True
+hi_0133,Tum Ho,hindi,rock,hi_0133_Tum_Ho.mp3,audio/hindi/rock/hi_0133_Tum_Ho.mp3,lyrics/hindi/hi_0133.txt,True
+hi_0135,Kun Faya Kun,hindi,rock,hi_0135_Kun_Faya_Kun.mp3,audio/hindi/rock/hi_0135_Kun_Faya_Kun.mp3,lyrics/hindi/hi_0135.txt,True
+hi_0137,Challa,hindi,rock,hi_0137_Challa.mp3,audio/hindi/rock/hi_0137_Challa.mp3,lyrics/hindi/hi_0137.txt,True
+hi_0139,Kabhi Kabhi Aditi,hindi,rock,hi_0139_Kabhi_Kabhi_Aditi.mp3,audio/hindi/rock/hi_0139_Kabhi_Kabhi_Aditi.mp3,lyrics/hindi/hi_0139.txt,True
+hi_0142,Aadat,hindi,rock,hi_0142_Aadat.mp3,audio/hindi/rock/hi_0142_Aadat.mp3,lyrics/hindi/hi_0142.txt,True
+hi_0143,Woh Lamhe,hindi,rock,hi_0143_Woh_Lamhe.mp3,audio/hindi/rock/hi_0143_Woh_Lamhe.mp3,lyrics/hindi/hi_0143.txt,True
+hi_0144,Tere Bin,hindi,rock,hi_0144_Tere_Bin.mp3,audio/hindi/rock/hi_0144_Tere_Bin.mp3,lyrics/hindi/hi_0144.txt,True
+hi_0146,Tere Liye,hindi,rock,hi_0146_Tere_Liye.mp3,audio/hindi/rock/hi_0146_Tere_Liye.mp3,lyrics/hindi/hi_0146.txt,True
+hi_0148,Jeena Jeena,hindi,rock,hi_0148_Jeena_Jeena.mp3,audio/hindi/rock/hi_0148_Jeena_Jeena.mp3,lyrics/hindi/hi_0148.txt,True
+hi_0149,Ilahi,hindi,rock,hi_0149_Ilahi.mp3,audio/hindi/rock/hi_0149_Ilahi.mp3,lyrics/hindi/hi_0149.txt,True
+hi_0150,Matargashti,hindi,rock,hi_0150_Matargashti.mp3,audio/hindi/rock/hi_0150_Matargashti.mp3,lyrics/hindi/hi_0150.txt,True
+hi_0154,Jungli Sher,hindi,hiphop,hi_0154_Jungli_Sher.mp3,audio/hindi/hiphop/hi_0154_Jungli_Sher.mp3,lyrics/hindi/hi_0154.txt,True
+hi_0155,Farak,hindi,hiphop,hi_0155_Farak.mp3,audio/hindi/hiphop/hi_0155_Farak.mp3,lyrics/hindi/hi_0155.txt,True
+hi_0156,Mirchi,hindi,hiphop,hi_0156_Mirchi.mp3,audio/hindi/hiphop/hi_0156_Mirchi.mp3,lyrics/hindi/hi_0156.txt,True
+hi_0157,Punya Paap,hindi,hiphop,hi_0157_Punya_Paap.mp3,audio/hindi/hiphop/hi_0157_Punya_Paap.mp3,lyrics/hindi/hi_0157.txt,True
+hi_0159,Kohinoor,hindi,hiphop,hi_0159_Kohinoor.mp3,audio/hindi/hiphop/hi_0159_Kohinoor.mp3,lyrics/hindi/hi_0159.txt,True
+hi_0160,Baazigar,hindi,hiphop,hi_0160_Baazigar.mp3,audio/hindi/hiphop/hi_0160_Baazigar.mp3,lyrics/hindi/hi_0160.txt,True
+hi_0162,Khatam,hindi,hiphop,hi_0162_Khatam.mp3,audio/hindi/hiphop/hi_0162_Khatam.mp3,lyrics/hindi/hi_0162.txt,True
+hi_0163,Samajh Mein Aaya Kya,hindi,hiphop,hi_0163_Samajh_Mein_Aaya_Kya.mp3,audio/hindi/hiphop/hi_0163_Samajh_Mein_Aaya_Kya.mp3,lyrics/hindi/hi_0163.txt,True
+hi_0167,Still Here,hindi,hiphop,hi_0167_Still_Here.mp3,audio/hindi/hiphop/hi_0167_Still_Here.mp3,lyrics/hindi/hi_0167.txt,True
+hi_0169,Nanchaku,hindi,hiphop,hi_0169_Nanchaku.mp3,audio/hindi/hiphop/hi_0169_Nanchaku.mp3,lyrics/hindi/hi_0169.txt,True
+hi_0171,Basti Ka Hasti,hindi,hiphop,hi_0171_Basti_Ka_Hasti.mp3,audio/hindi/hiphop/hi_0171_Basti_Ka_Hasti.mp3,lyrics/hindi/hi_0171.txt,True
+hi_0172,Insaan,hindi,hiphop,hi_0172_Insaan.mp3,audio/hindi/hiphop/hi_0172_Insaan.mp3,lyrics/hindi/hi_0172.txt,True
+hi_0173,Tadipaar,hindi,hiphop,hi_0173_Tadipaar.mp3,audio/hindi/hiphop/hi_0173_Tadipaar.mp3,lyrics/hindi/hi_0173.txt,True
+hi_0174,Ek Din Pyaar,hindi,hiphop,hi_0174_Ek_Din_Pyaar.mp3,audio/hindi/hiphop/hi_0174_Ek_Din_Pyaar.mp3,lyrics/hindi/hi_0174.txt,True
+hi_0175,Baarishein,hindi,hiphop,hi_0175_Baarishein.mp3,audio/hindi/hiphop/hi_0175_Baarishein.mp3,lyrics/hindi/hi_0175.txt,True
+es_0004,Whenever Wherever,spanish,pop,es_0004_Whenever_Wherever.mp3,audio/spanish/pop/es_0004_Whenever_Wherever.mp3,lyrics/spanish/es_0004.txt,True
+es_0018,Eres Mia,spanish,pop,es_0018_Eres_Mia.mp3,audio/spanish/pop/es_0018_Eres_Mia.mp3,lyrics/spanish/es_0018.txt,True
+es_0050,Mayores,spanish,pop,es_0050_Mayores.mp3,audio/spanish/pop/es_0050_Mayores.mp3,lyrics/spanish/es_0050.txt,True
+es_0093,Me Niego,spanish,pop,es_0093_Me_Niego.mp3,audio/spanish/pop/es_0093_Me_Niego.mp3,lyrics/spanish/es_0093.txt,True
+es_0102,Mi Tierra,spanish,pop,es_0102_Mi_Tierra.mp3,audio/spanish/pop/es_0102_Mi_Tierra.mp3,lyrics/spanish/es_0102.txt,True
+es_0122,Torero,spanish,pop,es_0122_Torero.mp3,audio/spanish/pop/es_0122_Torero.mp3,lyrics/spanish/es_0122.txt,True
+es_0126,Colgando En Tus Manos,spanish,pop,es_0126_Colgando_en_Tus_Manos.mp3,audio/spanish/pop/es_0126_Colgando_en_Tus_Manos.mp3,lyrics/spanish/es_0126.txt,True
+es_0163,Shower,spanish,pop,es_0163_Shower.mp3,audio/spanish/pop/es_0163_Shower.mp3,lyrics/spanish/es_0163.txt,True
+es_0200,Me Llamas,spanish,pop,es_0200_Me_Llamas.mp3,audio/spanish/pop/es_0200_Me_Llamas.mp3,lyrics/spanish/es_0200.txt,True
+sp_0204,La Bicicleta,spanish,pop,sp_0204_La_Bicicleta.mp3,audio/spanish/pop/sp_0204_La_Bicicleta.mp3,lyrics/spanish/sp_0204.txt,True
+sp_0206,Felices Los 4,spanish,pop,sp_0206_Felices_los_4.mp3,audio/spanish/pop/sp_0206_Felices_los_4.mp3,lyrics/spanish/sp_0206.txt,True
+sp_0207,Corazon,spanish,pop,sp_0207_Corazon.mp3,audio/spanish/pop/sp_0207_Corazon.mp3,lyrics/spanish/sp_0207.txt,True
+sp_0219,Dakiti,spanish,pop,sp_0219_Dakiti.mp3,audio/spanish/pop/sp_0219_Dakiti.mp3,lyrics/spanish/sp_0219.txt,True
+sp_0220,Yonaguni,spanish,pop,sp_0220_Yonaguni.mp3,audio/spanish/pop/sp_0220_Yonaguni.mp3,lyrics/spanish/sp_0220.txt,True
+sp_0221,Moscow Mule,spanish,pop,sp_0221_Moscow_Mule.mp3,audio/spanish/pop/sp_0221_Moscow_Mule.mp3,lyrics/spanish/sp_0221.txt,True
+es_0069,Mariposa Traicionera,spanish,rock,es_0069_Mariposa_Traicionera.mp3,audio/spanish/rock/es_0069_Mariposa_Traicionera.mp3,lyrics/spanish/es_0069.txt,True
+es_0115,Persiana Americana,spanish,rock,es_0115_Persiana_Americana.mp3,audio/spanish/rock/es_0115_Persiana_Americana.mp3,lyrics/spanish/es_0115.txt,True
+sp_0226,Rayando El Sol,spanish,rock,sp_0226_Rayando_el_Sol.mp3,audio/spanish/rock/sp_0226_Rayando_el_Sol.mp3,lyrics/spanish/sp_0226.txt,True
+sp_0227,Vivir Sin Aire,spanish,rock,sp_0227_Vivir_Sin_Aire.mp3,audio/spanish/rock/sp_0227_Vivir_Sin_Aire.mp3,lyrics/spanish/sp_0227.txt,True
+sp_0228,Oye Mi Amor,spanish,rock,sp_0228_Oye_Mi_Amor.mp3,audio/spanish/rock/sp_0228_Oye_Mi_Amor.mp3,lyrics/spanish/sp_0228.txt,True
+sp_0230,En El Muelle De San Blas,spanish,rock,sp_0230_En_el_Muelle_de_San_Blas.mp3,audio/spanish/rock/sp_0230_En_el_Muelle_de_San_Blas.mp3,lyrics/spanish/sp_0230.txt,True
+sp_0231,Amor Clandestino,spanish,rock,sp_0231_Amor_Clandestino.mp3,audio/spanish/rock/sp_0231_Amor_Clandestino.mp3,lyrics/spanish/sp_0231.txt,True
+sp_0233,Mi Verdad,spanish,rock,sp_0233_Mi_Verdad.mp3,audio/spanish/rock/sp_0233_Mi_Verdad.mp3,lyrics/spanish/sp_0233.txt,True
+sp_0234,Eres,spanish,rock,sp_0234_Eres.mp3,audio/spanish/rock/sp_0234_Eres.mp3,lyrics/spanish/sp_0234.txt,True
+sp_0236,Chilanga Banda,spanish,rock,sp_0236_Chilanga_Banda.mp3,audio/spanish/rock/sp_0236_Chilanga_Banda.mp3,lyrics/spanish/sp_0236.txt,True
+sp_0239,Persiana Americana,spanish,rock,sp_0239_Persiana_Americana.mp3,audio/spanish/rock/sp_0239_Persiana_Americana.mp3,lyrics/spanish/sp_0239.txt,True
+sp_0244,La Celula Que Explota,spanish,rock,sp_0244_La_Celula_Que_Explota.mp3,audio/spanish/rock/sp_0244_La_Celula_Que_Explota.mp3,lyrics/spanish/sp_0244.txt,True
+sp_0246,No Dejes Que,spanish,rock,sp_0246_No_Dejes_Que.mp3,audio/spanish/rock/sp_0246_No_Dejes_Que.mp3,lyrics/spanish/sp_0246.txt,True
+sp_0249,El Matador,spanish,rock,sp_0249_El_Matador.mp3,audio/spanish/rock/sp_0249_El_Matador.mp3,lyrics/spanish/sp_0249.txt,True
+sp_0250,Mal Bicho,spanish,rock,sp_0250_Mal_Bicho.mp3,audio/spanish/rock/sp_0250_Mal_Bicho.mp3,lyrics/spanish/sp_0250.txt,True
+es_0025,Yonaguni,spanish,hiphop,es_0025_Yonaguni.mp3,audio/spanish/hiphop/es_0025_Yonaguni.mp3,lyrics/spanish/es_0025.txt,True
+es_0030,Felices Los 4,spanish,hiphop,es_0030_Felices_Los_4.mp3,audio/spanish/hiphop/es_0030_Felices_Los_4.mp3,lyrics/spanish/es_0030.txt,True
+es_0036,El Perdon,spanish,hiphop,es_0036_El_Perdon.mp3,audio/spanish/hiphop/es_0036_El_Perdon.mp3,lyrics/spanish/es_0036.txt,True
+es_0040,Danza Kuduro,spanish,hiphop,es_0040_Danza_Kuduro.mp3,audio/spanish/hiphop/es_0040_Danza_Kuduro.mp3,lyrics/spanish/es_0040.txt,True
+es_0041,Pobre Diabla,spanish,hiphop,es_0041_Pobre_Diabla.mp3,audio/spanish/hiphop/es_0041_Pobre_Diabla.mp3,lyrics/spanish/es_0041.txt,True
+es_0045,Tusa,spanish,hiphop,es_0045_Tusa.mp3,audio/spanish/hiphop/es_0045_Tusa.mp3,lyrics/spanish/es_0045.txt,True
+es_0143,Culpables,spanish,hiphop,es_0143_Culpables.mp3,audio/spanish/hiphop/es_0143_Culpables.mp3,lyrics/spanish/es_0143.txt,True
+es_0155,Shaky Shaky,spanish,hiphop,es_0155_Shaky_Shaky.mp3,audio/spanish/hiphop/es_0155_Shaky_Shaky.mp3,lyrics/spanish/es_0155.txt,True
+es_0162,Krippy Kush,spanish,hiphop,es_0162_Krippy_Kush.mp3,audio/spanish/hiphop/es_0162_Krippy_Kush.mp3,lyrics/spanish/es_0162.txt,True
+es_0181,Wapo Traketero,spanish,hiphop,es_0181_Wapo_Traketero.mp3,audio/spanish/hiphop/es_0181_Wapo_Traketero.mp3,lyrics/spanish/es_0181.txt,True
+sp_0254,Booker T,spanish,hiphop,sp_0254_Booker_T.mp3,audio/spanish/hiphop/sp_0254_Booker_T.mp3,lyrics/spanish/sp_0254.txt,True
+sp_0259,Tu No Metes Cabra,spanish,hiphop,sp_0259_Tu_No_Metes_Cabra.mp3,audio/spanish/hiphop/sp_0259_Tu_No_Metes_Cabra.mp3,lyrics/spanish/sp_0259.txt,True
+sp_0264,Brindemos,spanish,hiphop,sp_0264_Brindemos.mp3,audio/spanish/hiphop/sp_0264_Brindemos.mp3,lyrics/spanish/sp_0264.txt,True
+sp_0272,Ginza,spanish,hiphop,sp_0272_Ginza.mp3,audio/spanish/hiphop/sp_0272_Ginza.mp3,lyrics/spanish/sp_0272.txt,True
+sp_0274,Blanco,spanish,hiphop,sp_0274_Blanco.mp3,audio/spanish/hiphop/sp_0274_Blanco.mp3,lyrics/spanish/sp_0274.txt,True

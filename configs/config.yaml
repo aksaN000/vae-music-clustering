@@ -3,7 +3,7 @@
 # Data Configuration
 data:
   audio_dir: "data/audio"
-  lyrics_dir: "data/processed_lyrics"
+  lyrics_dir: "data/lyrics"
   features_dir: "data/features"
   cache_dir: "data/cache"
   sample_rate: 22050
@@ -20,9 +20,9 @@ model:
   latent_dim: 128
   hidden_dims: [16, 32, 64]  # Reduced from [256, 512, 1024] to prevent PC hanging
   beta: 4.0  # For Beta-VAE
-  n_clusters: 50  # For VaDE (5 languages + 45 genres = 50 classes)
-  num_languages: 5  # Arabic, Bangla, English, Hindi, Spanish
-  num_genres: 45  # Total unique genres across all languages
+  n_clusters: 15  # For VaDE (4 languages + 3 genres per language = 15 classes)
+  num_languages: 4  # Arabic, English, Hindi, Spanish
+  num_genres: 3  # hiphop, pop, rock
   dropout: 0.2
   
 # Multi-modal Configuration
@@ -54,7 +54,7 @@ optimization:
 # Clustering Configuration
 clustering:
   methods: ["kmeans", "agglomerative", "dbscan", "gmm"]
-  n_clusters: [5, 10, 15, 20, 30, 45, 50]  # Test multiple cluster counts (5 languages, 45 genres, 50 combined)
+  n_clusters: [3, 4, 5, 10, 12, 15]  # Test multiple cluster counts (3 genres, 4 languages, 12 genres total, 15 combined)
   kmeans_init: 10  # Number of k-means initializations
   dbscan_eps: 0.5
   dbscan_min_samples: 5
@@ -88,7 +88,6 @@ baseline:
 # Languages
 languages:
   - arabic
-  - bangla
   - english
   - hindi
   - spanish

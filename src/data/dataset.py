@@ -17,26 +17,11 @@ class MusicDataset(Dataset):
     
     # Define language and genre mappings (class variables)
     LANGUAGE_MAP = {
-        'arabic': 0, 'bangla': 1, 'english': 2,
-        'hindi': 3, 'spanish': 4
+        'arabic': 0, 'english': 1, 'hindi': 2, 'spanish': 3
     }
     
     GENRE_MAP = {
-        'adhunik': 0, 'arabic_classic': 1, 'arabic_dabke': 2,
-        'arabic_electronic': 3, 'arabic_folk': 4, 'arabic_indie': 5,
-        'arabic_pop': 6, 'arabic_rap': 7, 'arabic_rock': 8,
-        'bachata': 9, 'banda': 10, 'bengali_rock': 11,
-        'bolero': 12, 'bollywood_classic': 13, 'bollywood_modern': 14,
-        'bollywood_patriotic': 15, 'bollywood_pop': 16, 'corrido': 17,
-        'country': 18, 'electronic': 19, 'flamenco': 20,
-        'flamenco_pop': 21, 'folk_baul': 22, 'hiphop': 23,
-        'indipop': 24, 'jazz': 25, 'khaleeji': 26,
-        'latin_folk': 27, 'latin_indie': 28, 'latin_pop': 29,
-        'latin_rock': 30, 'latin_trap': 31, 'mahraganat': 32,
-        'mariachi': 33, 'nazrul_geeti': 34, 'norteno': 35,
-        'pop': 36, 'rabindra_sangeet': 37, 'rai': 38,
-        'reggaeton': 39, 'rnb': 40, 'rock': 41,
-        'salsa': 42, 'tejano': 43, 'vallenato': 44
+        'hiphop': 0, 'pop': 1, 'rock': 2
     }
     
     def __init__(
