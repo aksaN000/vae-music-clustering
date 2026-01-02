@@ -12,24 +12,24 @@ Methods: kmeans, agglomerative, gmm
 BEST PERFORMERS
 --------------------------------------------------------------------------------
 
-Best SILHOUETTE: 0.0776
+Best SILHOUETTE: 0.1078
+  Model: Basic VAE
+  Task: genre
+  Method: gmm
+
+Best ARI: 0.0773
   Model: Basic VAE
   Task: genre
   Method: agglomerative
 
-Best ARI: 0.0595
-  Model: CVAE-Language
+Best NMI: 0.0969
+  Model: Basic VAE
   Task: genre
-  Method: kmeans
+  Method: agglomerative
 
-Best NMI: 0.0739
-  Model: CVAE-Language
+Best V_MEASURE: 0.0969
+  Model: Basic VAE
   Task: genre
-  Method: kmeans
-
-Best V_MEASURE: 0.0739
-  Model: CVAE-Language
-  Task: genre
-  Method: kmeans
+  Method: agglomerative
 
 ================================================================================
