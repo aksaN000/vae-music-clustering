@@ -12,6 +12,18 @@ import yaml
 import pandas as pd
 from pathlib import Path
 from sklearn.decomposition import PCA
+from sklearn.cluster import KMeans, AgglomerativeClustering
+from sklearn.mixture import GaussianMixture
+from sklearn.metrics import (
+    silhouette_score,
+    calinski_harabasz_score,
+    davies_bouldin_score,
+    adjusted_rand_score,
+    normalized_mutual_info_score,
+    homogeneity_score,
+    completeness_score,
+    v_measure_score
+)
 
 from src.data.dataset import AudioOnlyDataset, get_dataloader
 from src.models.vae import Autoencoder
@@ -108,7 +120,8 @@ def main(args):
     # Extract all features for raw clustering and PCA
     print("Extracting raw features...")
     all_features = []
-    all_labels = []
+    all_languages = []
+    all_genres = []
     
     for batch in dataloader:
         features = batch['features']
@@ -117,132 +130,146 @@ def main(args):
         all_features.append(features.numpy())
         
         if 'language' in batch:
-            all_labels.extend(batch['language'].numpy())
+            all_languages.extend(batch['language'].numpy())
+        if 'genre' in batch:
+            all_genres.extend(batch['genre'].numpy())
     
     raw_features = np.concatenate(all_features, axis=0)
-    true_labels = np.array(all_labels) if all_labels else None
-    has_labels = true_labels is not None
+    languages = np.array(all_languages) if all_languages else None
+    genres = np.array(all_genres) if all_genres else None
     
     print(f"Raw features shape: {raw_features.shape}")
+    print(f"Languages: {len(np.unique(languages)) if languages is not None else 'N/A'}")
+    print(f"Genres: {len(np.unique(genres)) if genres is not None else 'N/A'}")
     
     # Initialize
-    clustering_alg = ClusteringAlgorithms()
-    evaluator = ClusteringMetrics()
     visualizer = ClusterVisualizer(output_dir="results/visualizations/baseline")
-    
     all_results = []
     
-    # === 1. Raw Features + K-Means ===
+    # Define clustering tasks (match VAE evaluation)
+    tasks = []
+    if languages is not None:
+        tasks.append(('language', languages, 4))
+    if genres is not None:
+        tasks.append(('genre', genres, 3))
+    
+    # === 1. Raw Features + Clustering ===
     print("\n" + "="*60)
-    print("BASELINE 1: Raw Features + K-Means")
+    print("BASELINE 1: Raw Features (180 songs)")
     print("="*60)
     
-    for n_clusters in [5, 10, 15]:
-        print(f"\n  k = {n_clusters}")
-        pred_labels, _ = clustering_alg.kmeans(raw_features, n_clusters, n_init=10)
+    for task_name, true_labels, n_clusters in tasks:
+        print(f"\n>>> Task: {task_name.upper()} (n_clusters={n_clusters})")
         
-        metrics = evaluator.evaluate_all(raw_features, pred_labels, true_labels if has_labels else None)
-        metrics['method'] = f'raw_kmeans_k{n_clusters}'
-        metrics['n_clusters'] = n_clusters
-        all_results.append(metrics)
-        
-        evaluator.print_metrics(metrics, f"Raw K-Means (k={n_clusters})")
+        for method in ['kmeans', 'agglomerative', 'gmm']:
+            try:
+                if method == 'kmeans':
+                    kmeans = KMeans(n_clusters=n_clusters, random_state=42, n_init=10)
+                    pred_labels = kmeans.fit_predict(raw_features)
+                elif method == 'agglomerative':
+                    agglo = AgglomerativeClustering(n_clusters=n_clusters)
+                    pred_labels = agglo.fit_predict(raw_features)
+                else:  # gmm
+                    gmm = GaussianMixture(n_components=n_clusters, random_state=42, reg_covar=1e-4)
+                    pred_labels = gmm.fit_predict(raw_features)
+            except Exception as e:
+                print(f"  {method}: FAILED (memory error - {str(e)[:50]}...)")
+                continue
+            
+            # Match VAE evaluation CSV format
+            metrics = {
+                'model': 'Raw Features',
+                'task': task_name,
+                'method': method,
+                'n_clusters': n_clusters,
+                'silhouette': silhouette_score(raw_features, pred_labels) if len(np.unique(pred_labels)) > 1 else -1,
+                'calinski_harabasz': calinski_harabasz_score(raw_features, pred_labels) if len(np.unique(pred_labels)) > 1 else 0,
+                'davies_bouldin': davies_bouldin_score(raw_features, pred_labels) if len(np.unique(pred_labels)) > 1 else float('inf'),
+                'ari': adjusted_rand_score(true_labels, pred_labels),
+                'nmi': normalized_mutual_info_score(true_labels, pred_labels),
+                'homogeneity': homogeneity_score(true_labels, pred_labels),
+                'completeness': completeness_score(true_labels, pred_labels),
+                'v_measure': v_measure_score(true_labels, pred_labels)
+            }
+            all_results.append(metrics)
+            print(f"  {method}: NMI={metrics['nmi']:.4f}, Silhouette={metrics['silhouette']:.4f}")
     
-    # === 2. PCA + K-Means ===
+    # === 2. PCA + Clustering ===
     print("\n" + "="*60)
-    print("BASELINE 2: PCA + K-Means")
+    print("BASELINE 2: PCA (128 dims)")
     print("="*60)
     
-    latent_dim = config['baseline']['pca_components']
+    latent_dim = 128  # Match VAE latent dimension
     print(f"\nApplying PCA (n_components={latent_dim})...")
     
     pca = PCA(n_components=latent_dim, random_state=42)
     pca_features = pca.fit_transform(raw_features)
-    
     print(f"Explained variance: {pca.explained_variance_ratio_.sum():.4f}")
     
-    for n_clusters in [5, 10, 15]:
-        print(f"\n  k = {n_clusters}")
-        pred_labels, _ = clustering_alg.kmeans(pca_features, n_clusters, n_init=10)
+    for task_name, true_labels, n_clusters in tasks:
+        print(f"\n>>> Task: {task_name.upper()} (n_clusters={n_clusters})")
         
-        metrics = evaluator.evaluate_all(pca_features, pred_labels, true_labels if has_labels else None)
-        metrics['method'] = f'pca_kmeans_k{n_clusters}'
-        metrics['n_clusters'] = n_clusters
-        all_results.append(metrics)
-        
-        evaluator.print_metrics(metrics, f"PCA + K-Means (k={n_clusters})")
-        
-        if n_clusters == 5:
-            visualizer.plot_latent_space_2d(
-                pca_features,
-                pred_labels,
-                method='umap',
-                title=f'PCA + K-Means (k={n_clusters})',
-                save_name=f'pca_kmeans_k{n_clusters}_umap.png'
-            )
+        for method in ['kmeans', 'agglomerative', 'gmm']:
+            try:
+                if method == 'kmeans':
+                    kmeans = KMeans(n_clusters=n_clusters, random_state=42, n_init=10)
+                    pred_labels = kmeans.fit_predict(pca_features)
+                elif method == 'agglomerative':
+                    agglo = AgglomerativeClustering(n_clusters=n_clusters)
+                    pred_labels = agglo.fit_predict(pca_features)
+                else:  # gmm
+                    gmm = GaussianMixture(n_components=n_clusters, random_state=42, reg_covar=1e-3, covariance_type='diag')
+                    pred_labels = gmm.fit_predict(pca_features)
+            except Exception as e:
+                print(f"  {method}: FAILED ({str(e)[:60]}...)")
+                continue
+            
+            metrics = {
+                'model': 'PCA',
+                'task': task_name,
+                'method': method,
+                'n_clusters': n_clusters,
+                'silhouette': silhouette_score(pca_features, pred_labels) if len(np.unique(pred_labels)) > 1 else -1,
+                'calinski_harabasz': calinski_harabasz_score(pca_features, pred_labels) if len(np.unique(pred_labels)) > 1 else 0,
+                'davies_bouldin': davies_bouldin_score(pca_features, pred_labels) if len(np.unique(pred_labels)) > 1 else float('inf'),
+                'ari': adjusted_rand_score(true_labels, pred_labels),
+                'nmi': normalized_mutual_info_score(true_labels, pred_labels),
+                'homogeneity': homogeneity_score(true_labels, pred_labels),
+                'completeness': completeness_score(true_labels, pred_labels),
+                'v_measure': v_measure_score(true_labels, pred_labels)
+            }
+            all_results.append(metrics)
+            print(f"  {method}: NMI={metrics['nmi']:.4f}, Silhouette={metrics['silhouette']:.4f}")
     
-    # === 3. Autoencoder + K-Means ===
     print("\n" + "="*60)
-    print("BASELINE 3: Autoencoder + K-Means")
+    print("Note: Skipping Autoencoder baseline (memory constraints)")
+    print("Raw Features and PCA are sufficient classical baselines.")
     print("="*60)
     
-    # Train autoencoder
-    train_loader = get_dataloader(dataset, batch_size=32, shuffle=True, num_workers=8)
-    ae_model = train_autoencoder(train_loader, input_dim, latent_dim, device, epochs=50)
-    
-    # Extract features
-    print("\nExtracting autoencoder features...")
-    ae_features, _ = extract_ae_features(ae_model, dataloader, device)
-    print(f"AE features shape: {ae_features.shape}")
-    
-    for n_clusters in [5, 10, 15]:
-        print(f"\n  k = {n_clusters}")
-        pred_labels, _ = clustering_alg.kmeans(ae_features, n_clusters, n_init=10)
-        
-        metrics = evaluator.evaluate_all(ae_features, pred_labels, true_labels if has_labels else None)
-        metrics['method'] = f'ae_kmeans_k{n_clusters}'
-        metrics['n_clusters'] = n_clusters
-        all_results.append(metrics)
-        
-        evaluator.print_metrics(metrics, f"AE + K-Means (k={n_clusters})")
-        
-        if n_clusters == 5:
-            visualizer.plot_latent_space_2d(
-                ae_features,
-                pred_labels,
-                method='umap',
-                title=f'Autoencoder + K-Means (k={n_clusters})',
-                save_name=f'ae_kmeans_k{n_clusters}_umap.png'
-            )
-    
-    # Save results
+    # Save results (match VAE evaluation format)
     results_df = pd.DataFrame(all_results)
-    results_path = Path("results/metrics/baseline_results.csv")
+    results_path = Path("results/evaluations/baseline_clustering_metrics.csv")
     results_path.parent.mkdir(parents=True, exist_ok=True)
     results_df.to_csv(results_path, index=False)
-    print(f"\n\nResults saved to: {results_path}")
-    
-    # Plot comparison
-    visualizer.plot_metrics_comparison(
-        results_df,
-        save_name='baseline_comparison.png'
-    )
+    print(f"\n\n✅ Results saved to: {results_path}")
     
     # Print summary
     print("\n" + "="*60)
-    print("BASELINE SUMMARY")
+    print("BASELINE SUMMARY (180 songs)")
     print("="*60)
     
-    for method_prefix in ['raw_kmeans', 'pca_kmeans', 'ae_kmeans']:
-        method_results = results_df[results_df['method'].str.startswith(method_prefix)]
-        if len(method_results) > 0 and 'silhouette_score' in method_results.columns:
-            best = method_results.loc[method_results['silhouette_score'].idxmax()]
-            print(f"\n{method_prefix.upper()}:")
-            print(f"  Best Silhouette: {best['silhouette_score']:.4f} (k={int(best['n_clusters'])})")
-            if 'adjusted_rand_index' in best:
-                print(f"  ARI: {best['adjusted_rand_index']:.4f}")
+    for model_name in ['Raw Features', 'PCA']:
+        model_results = results_df[results_df['model'] == model_name]
+        if len(model_results) > 0:
+            print(f"\n{model_name}:")
+            for task in ['language', 'genre']:
+                task_results = model_results[model_results['task'] == task]
+                if len(task_results) > 0:
+                    best = task_results.loc[task_results['nmi'].idxmax()]
+                    print(f"  {task.capitalize()}: NMI={best['nmi']:.4f} ({best['method']})")
     
-    print("\nBaseline comparison complete!")
+    print("\n✅ Baseline evaluation complete!")
+    print("Note: Baselines use 180 original songs; VAEs use 2,107 windowed clips.")
 
 
 if __name__ == "__main__":

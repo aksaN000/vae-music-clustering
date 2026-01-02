@@ -36,15 +36,28 @@ class Visualizer:
         print(f"Visualizer initialized. Output: {self.output_dir}")
     
     def load_results(self):
-        """Load evaluation results"""
+        """Load evaluation results including baselines"""
         
+        # Load VAE results
         csv_path = self.results_dir / "clustering_metrics.csv"
-        
         if not csv_path.exists():
-            raise FileNotFoundError(f"Results not found: {csv_path}")
+            raise FileNotFoundError(f"VAE results not found: {csv_path}")
         
-        df = pd.read_csv(csv_path)
-        print(f"Loaded {len(df)} results")
+        df_vae = pd.read_csv(csv_path)
+        print(f"Loaded {len(df_vae)} VAE results")
+        
+        # Load baseline results
+        baseline_path = self.results_dir / "baseline_clustering_metrics.csv"
+        if baseline_path.exists():
+            df_baseline = pd.read_csv(baseline_path)
+            print(f"Loaded {len(df_baseline)} baseline results")
+            
+            # Merge
+            df = pd.concat([df_vae, df_baseline], ignore_index=True)
+            print(f"Total: {len(df)} results (VAE + Baselines)")
+        else:
+            print("Warning: Baseline results not found, continuing with VAEs only")
+            df = df_vae
         
         return df
     
