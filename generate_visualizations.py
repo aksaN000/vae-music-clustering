@@ -1,6 +1,5 @@
 """
 Comprehensive Visualization System
-Q1 Standard: Publication-ready plots and figures
 """
 
 import sys
