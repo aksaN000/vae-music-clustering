@@ -28,7 +28,10 @@ class AudioProcessor:
         n_fft: int = 2048,
         hop_length: int = 512,
         duration: int = 30,
-        cache_dir: str = "data/features"
+        cache_dir: str = "data/features",
+        use_windowing: bool = False,
+        window_size: float = 15.0,
+        hop_size: float = 7.5
     ):
         self.sample_rate = sample_rate
         self.n_mels = n_mels
@@ -39,26 +42,52 @@ class AudioProcessor:
         self.cache_dir = Path(cache_dir)
         self.cache_dir.mkdir(parents=True, exist_ok=True)
         
+        # Windowing parameters
+        self.use_windowing = use_windowing
+        self.window_size = window_size
+        self.hop_size = hop_size
+        
     def load_audio(self, audio_path: str) -> np.ndarray:
         """Load and normalize audio file"""
         try:
-            # Load audio
-            y, sr = librosa.load(audio_path, sr=self.sample_rate, duration=self.duration)
+            # Load audio (full song if duration is None)
+            if self.duration is not None:
+                y, sr = librosa.load(audio_path, sr=self.sample_rate, duration=self.duration)
+            else:
+                y, sr = librosa.load(audio_path, sr=self.sample_rate)
             
             # Normalize
             y = librosa.util.normalize(y)
             
-            # Pad or trim to exact duration
-            target_length = self.sample_rate * self.duration
-            if len(y) < target_length:
-                y = np.pad(y, (0, target_length - len(y)), mode='constant')
-            else:
-                y = y[:target_length]
+            # Pad or trim to exact duration only if duration specified
+            if self.duration is not None:
+                target_length = self.sample_rate * self.duration
+                if len(y) < target_length:
+                    y = np.pad(y, (0, target_length - len(y)), mode='constant')
+                else:
+                    y = y[:target_length]
                 
             return y
         except Exception as e:
             print(f"Error loading {audio_path}: {e}")
             return None
+    
+    def create_windows(self, y: np.ndarray) -> list:
+        """Create overlapping windows from audio signal"""
+        if not self.use_windowing:
+            return [y]
+        
+        window_samples = int(self.window_size * self.sample_rate)
+        hop_samples = int(self.hop_size * self.sample_rate)
+        
+        windows = []
+        start = 0
+        while start + window_samples <= len(y):
+            window = y[start:start + window_samples]
+            windows.append(window)
+            start += hop_samples
+        
+        return windows if windows else [y]
     
     def extract_melspectrogram(self, y: np.ndarray) -> np.ndarray:
         """Extract mel-spectrogram"""

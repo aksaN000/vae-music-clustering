@@ -116,7 +116,13 @@ def main(args):
     if args.data_path:
         data_path = args.data_path
     elif args.modality == 'audio':
-        data_path = "data/features/audio_only_dataset.pkl"
+        # Use windowed dataset if available
+        windowed_path = "data/features/audio_windowed_dataset.pkl"
+        if Path(windowed_path).exists():
+            data_path = windowed_path
+            print("Using windowed dataset (3x data augmentation)")
+        else:
+            data_path = "data/features/audio_only_dataset.pkl"
     else:
         data_path = "data/features/multimodal_dataset.pkl"
     
@@ -135,10 +141,52 @@ def main(args):
     
     print(f"Total samples: {len(dataset)}")
     
-    # Split into train/val
-    train_size = int(0.9 * len(dataset))
-    val_size = len(dataset) - train_size
-    train_dataset, val_dataset = random_split(dataset, [train_size, val_size])
+    # Song-level train/val split to avoid data leakage with windowed data
+    # Check if dataset has 'original_id' (windowed) or 'id' (non-windowed)
+    if hasattr(dataset, 'data') and len(dataset.data) > 0:
+        sample = dataset.data[0]
+        if 'original_id' in sample:
+            # Windowed dataset - split by original song ID
+            from collections import defaultdict
+            import random
+            
+            song_to_indices = defaultdict(list)
+            for idx, sample in enumerate(dataset.data):
+                orig_id = sample['original_id']
+                song_to_indices[orig_id].append(idx)
+            
+            # Split songs 90/10
+            song_ids = list(song_to_indices.keys())
+            random.seed(42)
+            random.shuffle(song_ids)
+            
+            split_idx = int(0.9 * len(song_ids))
+            train_songs = song_ids[:split_idx]
+            val_songs = song_ids[split_idx:]
+            
+            # Get all indices for train and val songs
+            train_indices = []
+            val_indices = []
+            for song_id in train_songs:
+                train_indices.extend(song_to_indices[song_id])
+            for song_id in val_songs:
+                val_indices.extend(song_to_indices[song_id])
+            
+            from torch.utils.data import Subset
+            train_dataset = Subset(dataset, train_indices)
+            val_dataset = Subset(dataset, val_indices)
+            
+            print(f"Song-level split: {len(train_songs)} train songs, {len(val_songs)} val songs")
+        else:
+            # Non-windowed - regular random split
+            train_size = int(0.9 * len(dataset))
+            val_size = len(dataset) - train_size
+            train_dataset, val_dataset = random_split(dataset, [train_size, val_size])
+    else:
+        # Fallback to random split
+        train_size = int(0.9 * len(dataset))
+        val_size = len(dataset) - train_size
+        train_dataset, val_dataset = random_split(dataset, [train_size, val_size])
     
     print(f"Train samples: {len(train_dataset)}")
     print(f"Val samples: {len(val_dataset)}")

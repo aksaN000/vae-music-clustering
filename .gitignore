@@ -74,6 +74,21 @@ tensorboard/
 *.temp
 .cache/
 
+# Diagnostic and Test Files
+experiments/check_normalization.py
+experiments/diagnose_current_results.py
+experiments/test_song_memorization.py
+experiments/verify_conv_vae.py
+feature_normalization_check.png
+
+# Documentation (temporary/draft files)
+why failed.md
+EVALUATION_COMPLETE.md
+EVALUATION_GUIDE.md
+MODEL_COMPARISON.md
+PROJECT_COMPLETION.md
+EVALUATION_SYSTEM_SUMMARY.md
+
 # Datasets (keep structure but not files)
 !data/audio/.gitkeep
 !data/lyrics/.gitkeep

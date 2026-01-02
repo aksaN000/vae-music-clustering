@@ -1,6 +1,6 @@
 """
 Comprehensive Model Evaluation System
-Q1 Standard: Complete metrics, visualizations, and comparisons
+Complete metrics, visualizations, and comparisons
 """
 
 import sys
@@ -33,7 +33,7 @@ from sklearn.metrics.pairwise import euclidean_distances
 import warnings
 warnings.filterwarnings('ignore')
 
-from src.data.dataset import MultimodalDataset, get_dataloader
+from src.data.dataset import MultimodalDataset, AudioOnlyDataset, get_dataloader
 from src.models.vae import BasicVAE
 from src.models.conv_vae import ConvVAE
 from src.models.beta_vae import BetaVAE, ConditionalVAE
@@ -60,8 +60,12 @@ class ModelEvaluator:
         
         print(f"Evaluator initialized on device: {self.device}")
     
-    def load_model(self, model_name, model_type, checkpoint_path, dataset):
-        """Load trained model and extract latent features"""
+    def load_model(self, model_name, model_type, checkpoint_path, dataset, aggregate_clips=True):
+        """Load trained model and extract latent features
+        
+        Args:
+            aggregate_clips: If True, average latent vectors for clips from same song
+        """
         
         cfg = self.config['model']
         latent_dim = cfg['latent_dim']
@@ -83,7 +87,8 @@ class ModelEvaluator:
         
         # Create model with correct architecture
         if model_type == 'basic':
-            model = BasicVAE(input_dim=input_dim, latent_dim=latent_dim, hidden_dims=hidden_dims)
+            # Basic VAE was trained with [16, 32, 64] architecture
+            model = BasicVAE(input_dim=input_dim, latent_dim=latent_dim, hidden_dims=[16, 32, 64])
         elif model_type == 'conv':
             model = ConvVAE(input_channels=1, input_height=128, input_width=1292,
                            latent_dim=latent_dim, hidden_channels=hidden_dims)
@@ -98,6 +103,10 @@ class ModelEvaluator:
                                   latent_dim=latent_dim, num_classes=3, hidden_channels=hidden_dims)
         elif model_type == 'vade':
             model = VaDE(input_dim=input_dim, latent_dim=latent_dim, n_clusters=15, hidden_dims=hidden_dims)
+        elif model_type == 'multimodal':
+            from src.fusion.multimodal import MultimodalVAE
+            model = MultimodalVAE(input_channels=1, input_height=128, input_width=1292,
+                                 latent_dim=latent_dim, hidden_channels=hidden_dims)
         else:
             raise ValueError(f"Unknown model type: {model_type}")
         
@@ -114,14 +123,15 @@ class ModelEvaluator:
         # Extract features
         return self._extract_features(model, dataset, model_name)
     
-    def _extract_features(self, model, dataset, model_name):
-        """Extract latent features from model"""
+    def _extract_features(self, model, dataset, model_name, aggregate_clips=True):
+        """Extract latent features from model and optionally aggregate by song"""
         
         dataloader = get_dataloader(dataset, batch_size=32, shuffle=False, num_workers=0)
         
         latents = []
         languages = []
         genres = []
+        sample_ids = []
         
         with torch.no_grad():
             for batch in tqdm(dataloader, desc=f"Extracting {model_name}", leave=False):
@@ -134,15 +144,12 @@ class ModelEvaluator:
                 if model_name in ['Basic VAE', 'VaDE']:
                     x = x.flatten(1)
                 
-                # CVAEs were trained with 1292 width, no padding needed
-                
                 # Get latent representation
                 try:
                     if 'CVAE' in model_name:
-                        # Conditional VAE needs condition
                         if 'Language' in model_name:
                             condition = batch['language'].to(self.device)
-                        else:  # Genre
+                        else:
                             condition = batch['genre'].to(self.device)
                         mu, logvar = model.encode(x, condition)
                         z = model.reparameterize(mu, logvar)
@@ -161,9 +168,46 @@ class ModelEvaluator:
                     languages.extend(batch['language'].cpu().numpy())
                 if 'genre' in batch:
                     genres.extend(batch['genre'].cpu().numpy())
+                if 'original_id' in batch:
+                    sample_ids.extend(batch['original_id'])
+                elif 'id' in batch:
+                    sample_ids.extend(batch['id'])
+        
+        all_latents = np.vstack(latents)
+        
+        # Aggregate clips by song if windowed dataset
+        if aggregate_clips and sample_ids and any('_w' in str(sid) for sid in sample_ids):
+            print(f"  Aggregating {len(all_latents)} clips -> songs...")
+            from collections import defaultdict
+            song_data = defaultdict(lambda: {'latents': [], 'language': None, 'genre': None})
+            
+            for i, sid in enumerate(sample_ids):
+                orig_id = str(sid).split('_w')[0] if '_w' in str(sid) else str(sid)
+                song_data[orig_id]['latents'].append(all_latents[i])
+                if len(languages) > i:
+                    song_data[orig_id]['language'] = languages[i]
+                if len(genres) > i:
+                    song_data[orig_id]['genre'] = genres[i]
+            
+            agg_latents = []
+            agg_languages = []
+            agg_genres = []
+            
+            for orig_id in sorted(song_data.keys()):
+                data = song_data[orig_id]
+                agg_latents.append(np.mean(data['latents'], axis=0))
+                if data['language'] is not None:
+                    agg_languages.append(data['language'])
+                if data['genre'] is not None:
+                    agg_genres.append(data['genre'])
+            
+            all_latents = np.vstack(agg_latents)
+            languages = agg_languages
+            genres = agg_genres
+            print(f"  -> {len(all_latents)} songs")
         
         features = {
-            'latents': np.vstack(latents),
+            'latents': all_latents,
             'languages': np.array(languages) if languages else None,
             'genres': np.array(genres) if genres else None
         }
@@ -286,13 +330,18 @@ class ModelEvaluator:
 
 def main():
     print("\n" + "="*80)
-    print("COMPREHENSIVE MODEL EVALUATION - Q1 STANDARD")
+    print("COMPREHENSIVE MODEL EVALUATION")
     print("="*80)
     
     evaluator = ModelEvaluator()
     
-    # Load dataset (use multimodal dataset for all since it has all 180 samples)
-    dataset = MultimodalDataset(data_path="data/features/multimodal_dataset.pkl")
+    # Load dataset - use windowed if available
+    windowed_path = "data/features/audio_windowed_dataset.pkl"
+    if Path(windowed_path).exists():
+        print("Using windowed dataset for evaluation")
+        dataset = AudioOnlyDataset(data_path=windowed_path)
+    else:
+        dataset = MultimodalDataset(data_path="data/features/multimodal_dataset.pkl")
     
     # Define models to evaluate (using actual checkpoint names)
     models = [
@@ -302,7 +351,7 @@ def main():
         ('CVAE-Language', 'cvae_lang', 'results/checkpoints/cvae_language/final_model.pt', dataset),
         ('CVAE-Genre', 'cvae_genre', 'results/checkpoints/cvae_genre/final_model.pt', dataset),
         ('VaDE', 'vade', 'results/checkpoints/vade/final_model.pt', dataset),
-        ('Multimodal VAE', 'conv', 'results/checkpoints/conv_multimodal/final_model.pt', dataset),
+        ('Multimodal VAE', 'conv', 'results/checkpoints/conv_multimodal/final_model.pt', dataset)
     ]
     
     all_clustering_results = []

@@ -7,18 +7,22 @@ data:
   features_dir: "data/features"
   cache_dir: "data/cache"
   sample_rate: 22050
-  audio_duration: 30  # seconds
+  audio_duration: null  # Load full song (3-5 minutes)
+  # Windowing for data augmentation
+  use_windowing: true  # Create multiple clips per audio file
+  window_size: 30  # Window size in seconds
+  hop_size: 20  # 33% overlap - balance between samples and independence
   n_mels: 128
   n_mfcc: 40
   n_fft: 2048
   hop_length: 512
-  num_workers: 0  # Use main process only (Windows multiprocessing fix)
+  num_workers: 0  # Keep 0 to reduce CPU load and keep PC responsive
   
 # Model Configuration
 model:
   type: "conv_vae"  # Options: basic_vae, conv_vae, beta_vae, cvae, vade
-  latent_dim: 256  # Increased from 128 to 256 (compression 646:1 instead of 1292:1)
-  hidden_dims: [64, 128, 256]  # Optimized for RTX 3060 12GB - deeper architecture
+  latent_dim: 128  # Original baseline
+  hidden_dims: [32, 64, 128, 256]  # Conv VAE architecture (used by all models except early Basic VAE)
   beta: 4.0  # For Beta-VAE
   n_clusters: 15  # For VaDE (4 languages + 3 genres per language = 15 classes)
   num_languages: 4  # Arabic, English, Hindi, Spanish
@@ -35,13 +39,13 @@ multimodal:
   
 # Training Configuration
 training:
-  batch_size: 24  # Reduced from 32 to fit larger model in 12GB VRAM
-  epochs: 200  # Increased from 100 to allow better convergence
-  learning_rate: 0.0001
+  batch_size: 32  # Original batch size
+  epochs: 100  # Original epochs
+  learning_rate: 0.0001  # Original conservative learning rate
   weight_decay: 0.0001
-  early_stopping_patience: 25  # Increased from 15 to allow longer training
+  early_stopping_patience: 15  # Original patience
   gradient_clip: 0.5
-  mixed_precision: true  # FP16 training - essential for 12GB VRAM
+  mixed_precision: true  # FP16 training
   accumulation_steps: 1
   
 # Optimization
