@@ -177,8 +177,8 @@ Full pairwise statistical comparisons are available in [results/comparisons/pair
 Tested on Python 3.10+ with PyTorch 2.x and a CUDA-capable GPU. CPU-only execution is possible but several orders of magnitude slower.
 
 ```bash
-git clone https://github.com/aksaN000/425_project.git
-cd 425_project
+git clone https://github.com/aksaN000/vae-music-clustering.git
+cd vae-music-clustering
 
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1            # Windows PowerShell
@@ -306,7 +306,7 @@ Each trained VAE is evaluated on two downstream tasks (genre and language) using
   author  = {Aksan Gony Alif},
   year    = {2025},
   note    = {BRAC University coursework (Student ID 24341256)},
-  howpublished = {\url{https://github.com/aksaN000/425_project}}
+  howpublished = {\url{https://github.com/aksaN000/vae-music-clustering}}
 }
 ```
 
