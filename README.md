@@ -22,7 +22,7 @@ A systematic empirical study comparing seven Variational Autoencoder (VAE) archi
 
 - **Seven VAE variants** implemented and benchmarked end-to-end: Basic VAE, Convolutional VAE, β-VAE, Conditional VAE (genre), Conditional VAE (language), VaDE (GMM-prior clustering VAE), and Multimodal VAE (audio + lyrics, attention fusion).
 - **Custom-curated balanced dataset** of 180 full-length songs (15 per language × genre cell), each manually paired with lyrics, expanded to 2,107 clips via a 30 s window / 20 s hop protocol.
-- **Song-level data splitting** performed before windowing — preventing the clip-leakage failure mode in which clips from the same song appear in multiple splits.
+- **Song-level data splitting** performed before windowing, preventing the clip-leakage failure mode in which clips from the same song appear in multiple splits.
 - **Three clustering algorithms × six evaluation metrics** (Silhouette, Calinski-Harabasz, Davies-Bouldin, ARI, NMI, V-Measure) cross-tabulated against two downstream tasks (language and genre).
 - **Baseline parity:** PCA + K-means, autoencoder + K-means, and raw-feature + K-means baselines included for honest comparison.
 - **Reconstruction-clustering disconnect** documented: the Multimodal VAE achieves the lowest reconstruction loss but does not lead on genre clustering.
@@ -43,10 +43,10 @@ A hand-curated hybrid-language music corpus, intentionally small and balanced to
 | Property | Value |
 | --- | --- |
 | Original songs | 180 |
-| Languages | 4 — Arabic, English, Hindi, Spanish |
-| Genres | 3 — Pop, Rock, Hip-Hop |
+| Languages | 4 (Arabic, English, Hindi, Spanish) |
+| Genres | 3 (Pop, Rock, Hip-Hop) |
 | Songs per (language × genre) cell | 15 |
-| Lyrics coverage | 100% — every song paired with a lyrics file |
+| Lyrics coverage | 100%: every song paired with a lyrics file |
 | Audio sample rate | 22,050 Hz |
 | Windowing | 30 s window, 20 s hop (33% overlap) |
 | Total clips after windowing | 2,107 |
@@ -68,8 +68,8 @@ All models share latent dimensionality 128 and use the encoder/decoder hidden st
 | 1 | Basic VAE | Audio | Fully-connected encoder/decoder | [src/models/vae.py](src/models/vae.py) |
 | 2 | Convolutional VAE | Audio | Convolutional stack over mel-spectrograms | [src/models/conv_vae.py](src/models/conv_vae.py) |
 | 3 | β-VAE | Audio | Disentangled latent space, β = 4.0 | [src/models/beta_vae.py](src/models/beta_vae.py) |
-| 4 | CVAE — language | Audio + label | Language label as condition | [src/models/vae.py](src/models/vae.py) |
-| 5 | CVAE — genre | Audio + label | Genre label as condition | [src/models/vae.py](src/models/vae.py) |
+| 4 | CVAE (language) | Audio + label | Language label as condition | [src/models/vae.py](src/models/vae.py) |
+| 5 | CVAE (genre) | Audio + label | Genre label as condition | [src/models/vae.py](src/models/vae.py) |
 | 6 | VaDE | Audio | Gaussian-mixture prior with 15 components | [src/models/vade.py](src/models/vade.py) |
 | 7 | Multimodal VAE | Audio + lyrics | Attention fusion of audio + XLM-RoBERTa lyric embeddings | [src/fusion/multimodal.py](src/fusion/multimodal.py) |
 
@@ -77,7 +77,7 @@ Baselines (in [experiments/baseline.py](experiments/baseline.py)): PCA + K-means
 
 ## Headline Results
 
-Results aggregated from [results/comparisons/summary_table.csv](results/comparisons/summary_table.csv) — means ± std across clustering methods.
+Results aggregated from [results/comparisons/summary_table.csv](results/comparisons/summary_table.csv): means ± std across clustering methods.
 
 **Per-model NMI summary across both tasks (higher is better):**
 
@@ -112,11 +112,11 @@ Results aggregated from [results/comparisons/summary_table.csv](results/comparis
 
 **Key findings:**
 
-1. **For genre clustering, simplicity wins.** The 5.5 M-parameter Basic VAE beats every more sophisticated architecture — including the 64.5 M-parameter Conv VAE — across all three clustering methods.
+1. **For genre clustering, simplicity wins.** The 5.5 M-parameter Basic VAE beats every more sophisticated architecture, including the 64.5 M-parameter Conv VAE, across all three clustering methods.
 2. **For language clustering, multimodality wins.** The Multimodal VAE achieves the highest mean language NMI, narrowly outperforming its unimodal Conv-VAE counterpart. Audio-lyrics fusion buys the most where audio alone is least discriminative.
-3. **Reconstruction loss does not predict clustering.** The Multimodal VAE attains the lowest validation reconstruction loss (0.5502 per the paper) yet ranks last on genre clustering — a clean counter-example to the "better generative model ⇒ better representations" intuition.
+3. **Reconstruction loss does not predict clustering.** The Multimodal VAE attains the lowest validation reconstruction loss (0.5502 per the paper) yet ranks last on genre clustering, a clean counter-example to the "better generative model ⇒ better representations" intuition.
 4. **Hard ceiling near NMI ≈ 0.10.** No model, baseline, or clustering algorithm exceeds NMI ≈ 0.10 on either task, suggesting a fundamental scale limitation of a 180-song corpus rather than an architectural deficit.
-5. **Agglomerative narrowly leads on ARI/NMI, K-means on Silhouette.** GMM yields the best NMI on average but lower Silhouette — consistent with GMM producing softer, more overlapping clusters than agglomerative or K-means.
+5. **Agglomerative narrowly leads on ARI/NMI, K-means on Silhouette.** GMM yields the best NMI on average but lower Silhouette, consistent with GMM producing softer, more overlapping clusters than agglomerative or K-means.
 
 Full pairwise statistical comparisons are available in [results/comparisons/pairwise_comparisons.csv](results/comparisons/pairwise_comparisons.csv); a LaTeX-formatted summary table in [results/comparisons/table_latex.tex](results/comparisons/table_latex.tex).
 
@@ -138,7 +138,7 @@ Full pairwise statistical comparisons are available in [results/comparisons/pair
 ├── src/
 │   ├── data/                       # audio_processor, lyrics_processor, dataset, data_matcher
 │   ├── models/                     # vae, conv_vae, beta_vae, vade
-│   ├── fusion/                     # multimodal.py — attention-based audio/lyrics fusion
+│   ├── fusion/                     # multimodal.py: attention-based audio/lyrics fusion
 │   ├── clustering/                 # cluster.py, evaluation.py
 │   ├── training/                   # trainer.py
 │   └── visualization/              # plots.py
@@ -281,7 +281,7 @@ Audio augmentation (pitch shift ±2 semitones, time stretch 0.9–1.1×, noise f
 
 ## Evaluation Framework
 
-Each trained VAE is evaluated on two downstream tasks (genre and language) using three clustering algorithms (K-means, Agglomerative, GMM), producing a 3 × 2 metric grid per model. The cross-tabulation uses six metrics — three internal (Silhouette, Calinski-Harabasz, Davies-Bouldin) and three external (ARI, NMI, V-Measure / Purity).
+Each trained VAE is evaluated on two downstream tasks (genre and language) using three clustering algorithms (K-means, Agglomerative, GMM), producing a 3 × 2 metric grid per model. The cross-tabulation uses six metrics: three internal (Silhouette, Calinski-Harabasz, Davies-Bouldin) and three external (ARI, NMI, V-Measure / Purity).
 
 - Per-model raw metrics: `results/evaluations/<model>/`
 - Aggregated table: [results/comparisons/summary_table.csv](results/comparisons/summary_table.csv)
@@ -292,11 +292,11 @@ Each trained VAE is evaluated on two downstream tasks (genre and language) using
 
 ## Methodological Notes
 
-- **Song-level splitting before windowing.** All 180 original songs are partitioned into train/validation/test (80/10/10) *before* the 30 s/20 s windowing protocol is applied. This guarantees no two clips from the same song appear in different splits — a common failure mode when windowing is performed first and clips are split randomly.
+- **Song-level splitting before windowing.** All 180 original songs are partitioned into train/validation/test (80/10/10) *before* the 30 s/20 s windowing protocol is applied. This guarantees no two clips from the same song appear in different splits, a common failure mode when windowing is performed first and clips are split randomly.
 - **Class balance by construction.** Exactly 15 songs per (language × genre) cell, eliminating class-prior confounds when comparing per-task NMI / ARI.
 - **Identical training budget per model.** Same batch size, learning rate, weight decay, mixed-precision setting, early-stopping patience, and 100 epoch cap, so accuracy gaps reflect architecture rather than tuning effort.
 - **Baseline parity.** PCA + K-means and raw-features + K-means are run through the same evaluation pipeline as the learned models, so any "VAE wins" claim is measured against honest non-deep alternatives.
-- **NMI ceiling reported, not hidden.** No model exceeds NMI ≈ 0.10 — this is reported rather than excluded, and attributed to dataset scale (180 songs) rather than method failure.
+- **NMI ceiling reported, not hidden.** No model exceeds NMI ≈ 0.10; this is reported rather than excluded, and attributed to dataset scale (180 songs) rather than method failure.
 
 ## Citing this Work
 
