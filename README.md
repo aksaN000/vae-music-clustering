@@ -303,9 +303,9 @@ Each trained VAE is evaluated on two downstream tasks (genre and language) using
 ```bibtex
 @misc{alif2025vae_music_clustering,
   title   = {Variational Autoencoders for Multi-Modal Hybrid-Language Music Clustering: A Systematic Comparison},
-  author  = {Aksan Gony Alif},
+  author  = {Alif, Aksan Gony},
   year    = {2025},
-  note    = {BRAC University coursework (Student ID 24341256)},
+  note    = {Department of Computer Science and Engineering, BRAC University},
   howpublished = {\url{https://github.com/aksaN000/vae-music-clustering}}
 }
 ```
